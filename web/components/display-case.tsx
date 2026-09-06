@@ -20,6 +20,7 @@ type ViewPosition = { x: number; y: number; z: number };
 type ViewerPosition = { x: number; y: number; z: number };
 type TrackerState = 'connecting' | 'tracking' | 'calibrating' | 'lost' | 'offline' | 'manual';
 type TrackingPacket = {
+  frame?: { fps?: number };
   tracking?: boolean;
   face?: { viewer_position_m?: { filtered?: ViewerPosition } | null } | null;
 };
@@ -598,27 +599,70 @@ export function DisplayCase() {
   const faceEnabledRef = useRef(true);
   const socketReadyRef = useRef(false);
   const neutralPositionRef = useRef<ViewerPosition | null>(null);
+  const latestPositionRef = useRef<ViewerPosition | null>(null);
+  const mousePositionRef = useRef({ x: 0, y: 0 });
+  const metricsRef = useRef({ frames: 0, trackingFps: 0, receivedAt: 0 });
   const [settings, setSettings] = useState<DisplaySettings>(() => cloneSettings());
   const [isMoving, setIsMoving] = useState(false);
   const [faceEnabled, setFaceEnabled] = useState(true);
   const [trackerState, setTrackerState] = useState<TrackerState>('connecting');
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const [showMetrics, setShowMetrics] = useState(false);
+  const [metrics, setMetrics] = useState({ fps: 0, trackingFps: 0, age: null as number | null });
+
+  useEffect(() => {
+    if (!showMetrics) return;
+    let previousTime = performance.now();
+    let previousFrames = metricsRef.current.frames;
+    const timer = window.setInterval(() => {
+      const now = performance.now();
+      const value = metricsRef.current;
+      setMetrics({ fps: (value.frames - previousFrames) * 1000 / (now - previousTime), trackingFps: value.trackingFps, age: value.receivedAt ? now - value.receivedAt : null });
+      previousTime = now;
+      previousFrames = value.frames;
+    }, 500);
+    return () => window.clearInterval(timer);
+  }, [showMetrics]);
+
+  useEffect(() => {
+    settingsRef.current = settings;
+    const position = latestPositionRef.current;
+    const neutral = neutralPositionRef.current;
+    const view = settings.view;
+    if (faceEnabledRef.current && position && neutral) {
+      targetRef.current = {
+        x: clamp((position.x - neutral.x) * view.positionGain * (view.invertX ? -1 : 1), -view.xLimit, view.xLimit),
+        y: clamp((position.y - neutral.y) * view.positionGain, -view.yLimit, view.yLimit),
+        z: clamp(view.eyeDistance + (position.z - neutral.z) * view.depthGain, view.zMinimum, view.zMaximum),
+      };
+    } else {
+      const mouse = faceEnabledRef.current ? { x: 0, y: 0 } : mousePositionRef.current;
+      targetRef.current = { x: mouse.x * view.mouseXGain, y: mouse.y * view.mouseYGain, z: baselineDepth(settings) };
+    }
+  }, [settings]);
 
   const updateSettings = useCallback((mutate: (draft: DisplaySettings) => void) => {
     setSettings((previous) => {
       const next = structuredClone(previous);
       mutate(next);
-      settingsRef.current = next;
+      next.view.zMinimum = Math.min(next.view.zMinimum, next.view.zMaximum - 0.1);
+      next.view.eyeDistance = clamp(next.view.eyeDistance, next.view.zMinimum, next.view.zMaximum);
+      next.view.near = Math.min(next.view.near, next.view.zMinimum / 2);
+      next.view.far = Math.max(next.view.far, next.view.zMaximum + next.case.depth + 1);
       return next;
     });
   }, []);
   const resetSettings = useCallback(() => {
     const next = cloneSettings();
+    latestPositionRef.current = null;
+    neutralPositionRef.current = null;
+    mousePositionRef.current = { x: 0, y: 0 };
     settingsRef.current = next;
     setSettings(next);
   }, []);
 
   const calibrateFace = useCallback(() => {
+    latestPositionRef.current = null;
     neutralPositionRef.current = null;
     targetRef.current = { x: 0, y: 0, z: baselineDepth(settingsRef.current) };
     setIsMoving(false);
@@ -628,6 +672,7 @@ export function DisplayCase() {
 
   const resetView = useCallback(() => {
     if (faceEnabledRef.current) return calibrateFace();
+    mousePositionRef.current = { x: 0, y: 0 };
     targetRef.current = { x: 0, y: 0, z: baselineDepth(settingsRef.current) };
     draggingRef.current = false;
     setIsMoving(false);
@@ -636,6 +681,8 @@ export function DisplayCase() {
 
   const toggleTrackingMode = useCallback(() => {
     const enabled = !faceEnabledRef.current;
+    latestPositionRef.current = null;
+    mousePositionRef.current = { x: 0, y: 0 };
     faceEnabledRef.current = enabled;
     setFaceEnabled(enabled);
     draggingRef.current = false;
@@ -651,30 +698,42 @@ export function DisplayCase() {
     let disposed = false;
     let socket: WebSocket | null = null;
     let reconnectTimer: number | undefined;
-    let lostTimer: number | undefined;
+    let lastTrackingTime = performance.now();
+    const lostTimer = window.setInterval(() => {
+      if (!faceEnabledRef.current || performance.now() - lastTrackingTime < settingsRef.current.view.lostResetMs) return;
+      latestPositionRef.current = null;
+      targetRef.current = { x: 0, y: 0, z: baselineDepth(settingsRef.current) };
+      if (socketReadyRef.current) setTrackerState('lost');
+    }, 100);
     const connect = () => {
       if (disposed) return;
       if (faceEnabledRef.current) setTrackerState('connecting');
       socket = new WebSocket(settings.connectionUrl);
       socket.onopen = () => {
+        if (disposed) return;
         socketReadyRef.current = true;
+        neutralPositionRef.current = null;
+        latestPositionRef.current = null;
+        metricsRef.current.receivedAt = 0;
+        lastTrackingTime = performance.now();
         if (faceEnabledRef.current) setTrackerState(neutralPositionRef.current ? 'lost' : 'calibrating');
       };
       socket.onmessage = (event) => {
-        if (!faceEnabledRef.current) return;
+        if (disposed || !faceEnabledRef.current) return;
         let packet: TrackingPacket;
         try { packet = JSON.parse(event.data) as TrackingPacket; } catch { return; }
-        const position = packet.face?.viewer_position_m?.filtered;
+        if (packet && typeof packet === 'object') {
+          metricsRef.current.receivedAt = performance.now();
+          metricsRef.current.trackingFps = Number.isFinite(packet.frame?.fps) ? packet.frame!.fps! : 0;
+        }
+        const position = packet?.face?.viewer_position_m?.filtered;
         const currentSettings = settingsRef.current;
-        if (!packet.tracking || !position) {
+        if (!packet?.tracking || !position || ![position.x, position.y, position.z].every(Number.isFinite)) {
           setTrackerState('lost');
-          window.clearTimeout(lostTimer);
-          lostTimer = window.setTimeout(() => {
-            targetRef.current = { x: 0, y: 0, z: baselineDepth(settingsRef.current) };
-          }, currentSettings.view.lostResetMs);
           return;
         }
-        window.clearTimeout(lostTimer);
+        lastTrackingTime = performance.now();
+        latestPositionRef.current = position;
         if (!neutralPositionRef.current) {
           neutralPositionRef.current = { ...position };
           targetRef.current = { x: 0, y: 0, z: baselineDepth(currentSettings) };
@@ -692,6 +751,7 @@ export function DisplayCase() {
       };
       socket.onerror = () => socket?.close();
       socket.onclose = () => {
+        if (disposed) return;
         socketReadyRef.current = false;
         if (faceEnabledRef.current) setTrackerState('offline');
         if (!disposed) reconnectTimer = window.setTimeout(connect, settingsRef.current.view.reconnectMs);
@@ -701,7 +761,8 @@ export function DisplayCase() {
     return () => {
       disposed = true;
       window.clearTimeout(reconnectTimer);
-      window.clearTimeout(lostTimer);
+      window.clearInterval(lostTimer);
+      socketReadyRef.current = false;
       socket?.close();
     };
   }, [settings.connectionUrl]);
@@ -721,7 +782,8 @@ export function DisplayCase() {
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     mount.appendChild(renderer.domElement);
 
-    let caseKey = '';
+    let caseKey = JSON.stringify(initial.case);
+    let appliedSettings: DisplaySettings | null = null;
     let caseGroup = createDisplayCase(initial);
     scene.add(caseGroup);
     const artifact = createArtifact(initial);
@@ -755,20 +817,24 @@ export function DisplayCase() {
     const animate = (animationTime = performance.now()) => {
       animationFrame = requestAnimationFrame(animate);
       const active = settingsRef.current;
-      const nextCaseKey = JSON.stringify(active.case);
-      if (nextCaseKey !== caseKey) {
-        scene.remove(caseGroup);
-        disposeObject(caseGroup);
-        caseGroup = createDisplayCase(active);
-        handles.caseGroup = caseGroup;
-        scene.add(caseGroup);
-        caseKey = nextCaseKey;
+      if (active !== appliedSettings) {
+        const nextCaseKey = JSON.stringify(active.case);
+        if (nextCaseKey !== caseKey) {
+          scene.remove(caseGroup);
+          disposeObject(caseGroup);
+          caseGroup = createDisplayCase(active);
+          handles.caseGroup = caseGroup;
+          scene.add(caseGroup);
+          caseKey = nextCaseKey;
+        }
+        applySceneSettings(handles, active);
+        renderer.toneMappingExposure = active.lighting.exposure;
+        camera.near = active.view.near;
+        camera.far = active.view.far;
+        appliedSettings = active;
       }
-      applySceneSettings(handles, active);
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, active.lighting.pixelRatioCap));
-      renderer.toneMappingExposure = active.lighting.exposure;
-      camera.near = active.view.near;
-      camera.far = active.view.far;
+      const pixelRatio = Math.min(window.devicePixelRatio, active.lighting.pixelRatioCap);
+      if (renderer.getPixelRatio() !== pixelRatio) renderer.setPixelRatio(pixelRatio);
       const deltaSeconds = Math.min((animationTime - previousAnimationTime) / 1000, 0.1);
       previousAnimationTime = animationTime;
       desired.set(targetRef.current.x, targetRef.current.y, targetRef.current.z);
@@ -779,6 +845,7 @@ export function DisplayCase() {
       camera.updateMatrixWorld();
       updateOffAxisProjection(current, active);
       renderer.render(scene, camera);
+      metricsRef.current.frames += 1;
     };
     resetRef.current = () => desired.set(0, 0, baselineDepth(settingsRef.current));
     const observer = new ResizeObserver(resize);
@@ -800,6 +867,7 @@ export function DisplayCase() {
     const x = ((event.clientX - bounds.left) / bounds.width) * 2 - 1;
     const y = 1 - ((event.clientY - bounds.top) / bounds.height) * 2;
     const active = settingsRef.current;
+    mousePositionRef.current = { x, y };
     targetRef.current = { x: x * active.view.mouseXGain, y: y * active.view.mouseYGain, z: baselineDepth(active) };
     setIsMoving(true);
   };
@@ -832,7 +900,12 @@ export function DisplayCase() {
           <div className="screen-frame pointer-events-none absolute inset-0 z-30" aria-hidden="true" />
           <div className="pointer-events-none absolute inset-x-0 top-0 flex items-start justify-end bg-gradient-to-b from-black/40 to-transparent px-5 pb-12 pt-5 sm:px-8 sm:pt-7"><div className="flex items-center gap-2 rounded-full border border-white/10 bg-black/20 px-3 py-1.5 text-[11px] text-white/65 backdrop-blur-md"><span className={`size-1.5 rounded-full ${statusColor}`} />{statusLabel}</div></div>
           {settingsOpen && <SettingsPanel settings={settings} update={updateSettings} reset={resetSettings} onClose={() => setSettingsOpen(false)} />}
+          {showMetrics && <output className="pointer-events-none absolute left-4 top-4 z-40 rounded bg-black/70 p-3 text-xs text-white">
+            渲染 {metrics.fps.toFixed(0)} FPS · 追踪 {metrics.age !== null && metrics.age < 1000 ? metrics.trackingFps.toFixed(0) : '—'} FPS<br />
+            数据距今 {metrics.age === null ? '尚未收到' : `${Math.round(metrics.age)} ms`}
+          </output>}
           <div className="absolute bottom-4 left-4 right-4 z-40 flex items-end justify-end gap-3 sm:bottom-7 sm:left-8 sm:right-8"><div className="flex gap-2">
+            <Button type="button" variant="outline" size="sm" aria-pressed={showMetrics} onClick={() => setShowMetrics((value) => !value)} className="border-white/15 bg-black/35 text-white">性能</Button>
             <Button type="button" variant="outline" size="icon-lg" aria-label={faceEnabled ? '切换到鼠标模式' : '启用人脸跟踪'} onClick={toggleTrackingMode} className={`border-white/15 text-white hover:bg-black/55 hover:text-white ${faceEnabled ? 'bg-[#6f9f91]/45' : 'bg-black/35'}`}>{faceEnabled ? <ScanFace /> : <MousePointer2 />}</Button>
             <Button type="button" variant="outline" size="icon-lg" aria-label={faceEnabled ? '重新校准中心' : '复位视角'} onClick={resetView} className="border-white/15 bg-black/35 text-white hover:bg-black/55 hover:text-white">{faceEnabled ? <LocateFixed /> : <RotateCcw />}</Button>
             <Button type="button" variant="outline" size="icon-lg" aria-label="打开显示设置" aria-expanded={settingsOpen} onClick={() => setSettingsOpen((current) => !current)} className={`border-white/15 text-white hover:bg-black/55 hover:text-white ${settingsOpen ? 'bg-[#6f9f91]/45' : 'bg-black/35'}`}><Settings2 /></Button>

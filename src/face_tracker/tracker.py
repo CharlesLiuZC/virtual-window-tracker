@@ -10,6 +10,7 @@ import numpy as np
 
 from .config import Settings
 from .filtering import PositionFilter
+from .selection import FaceSelector
 from .geometry import (
     CameraIntrinsics,
     Point2,
@@ -53,6 +54,7 @@ class FacePositionTracker:
             settings.filter_derivative_cutoff,
         )
         self._last_timestamp_ms = -1
+        self._selector = FaceSelector()
 
     def close(self) -> None:
         self._detector.close()
@@ -71,11 +73,16 @@ class FacePositionTracker:
         image = mp.Image(image_format=mp.ImageFormat.SRGB, data=rgb)
         result = self._detector.detect_for_video(image, timestamp_ms)
 
-        if not result.detections:
+        selected = self._selector.select([
+            (d.bounding_box.origin_x / width, d.bounding_box.origin_y / height,
+             d.bounding_box.width / width, d.bounding_box.height / height)
+            for d in result.detections
+        ], time.monotonic())
+        if selected is None:
             self._position_filter.reset()
             return {"tracking": False, "face": None}
 
-        detection = result.detections[0]
+        detection = result.detections[selected]
         keypoints = detection.keypoints or []
         if len(keypoints) < 2:
             self._position_filter.reset()

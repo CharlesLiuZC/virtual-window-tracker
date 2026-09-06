@@ -71,7 +71,8 @@ class PositionFilter:
         args = (min_cutoff, beta, derivative_cutoff)
         self.x = OneEuroFilter(*args)
         self.y = OneEuroFilter(*args)
-        self.z = OneEuroFilter(*args)
+        # Depth from apparent eye spacing is noisier than lateral position.
+        self.z = OneEuroFilter(min_cutoff * 0.5, beta * 0.5, derivative_cutoff)
 
     def apply(
         self, x: float, y: float, z: float, timestamp_s: float
@@ -86,4 +87,3 @@ class PositionFilter:
         self.x.reset()
         self.y.reset()
         self.z.reset()
-

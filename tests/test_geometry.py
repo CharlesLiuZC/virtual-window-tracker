@@ -31,4 +31,3 @@ def test_intrinsics_from_fov() -> None:
     intrinsics = CameraIntrinsics.from_horizontal_fov(1280, 720, 70)
     recovered_fov = 2 * math.degrees(math.atan(1280 / (2 * intrinsics.fx)))
     assert recovered_fov == pytest.approx(70)
-
