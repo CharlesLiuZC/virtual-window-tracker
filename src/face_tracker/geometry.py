@@ -23,8 +23,6 @@ class CameraIntrinsics:
     def from_horizontal_fov(
         cls, width: int, height: int, horizontal_fov_deg: float
     ) -> "CameraIntrinsics":
-        if width <= 0 or height <= 0 or not 1 < horizontal_fov_deg < 179:
-            raise ValueError("Camera size and horizontal field of view must be valid")
         fx = width / (2.0 * math.tan(math.radians(horizontal_fov_deg) / 2.0))
         return cls(fx=fx, fy=fx, cx=width / 2.0, cy=height / 2.0)
 
@@ -57,10 +55,7 @@ def estimate_viewer_position_m(
     assumed_ipd_m: float,
 ) -> tuple[float, float, float] | None:
     """Estimate eye midpoint in camera space: x right, y up, z toward viewer."""
-    values = (eye_center_px.x, eye_center_px.y, eye_distance_px, intrinsics.fx,
-              intrinsics.fy, intrinsics.cx, intrinsics.cy, assumed_ipd_m)
-    if (not all(math.isfinite(v) for v in values) or eye_distance_px <= 1e-6
-            or intrinsics.fx <= 0 or intrinsics.fy <= 0 or assumed_ipd_m <= 0):
+    if eye_distance_px <= 1e-6:
         return None
     z = intrinsics.fx * assumed_ipd_m / eye_distance_px
     x = (eye_center_px.x - intrinsics.cx) * z / intrinsics.fx
@@ -88,3 +83,4 @@ def euler_degrees_from_rotation_matrix(matrix: Sequence[Sequence[float]]) -> dic
         "yaw": math.degrees(yaw),
         "roll": math.degrees(roll),
     }
+

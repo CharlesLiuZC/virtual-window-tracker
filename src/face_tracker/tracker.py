@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import time
 from pathlib import Path
 from typing import Any
 
@@ -8,9 +9,10 @@ import mediapipe as mp
 import numpy as np
 
 from .config import Settings
-from .calibration import CalibrationProvider
-from .stabilization import StablePositionTracker
+from .filtering import PositionFilter
+from .selection import FaceSelector
 from .geometry import (
+    CameraIntrinsics,
     Point2,
     average_points,
     estimate_viewer_position_m,
@@ -36,7 +38,6 @@ def _point_payload(point: Point2, width: int, height: int) -> dict[str, Any]:
 class FacePositionTracker:
     def __init__(self, settings: Settings, model_path: Path) -> None:
         self.settings = settings
-        self._camera = CalibrationProvider(settings.camera_hfov_deg, settings.calibration_path)
         base_options = mp.tasks.BaseOptions(
             model_asset_path=str(model_path),
             delegate=mp.tasks.BaseOptions.Delegate.CPU,
@@ -47,12 +48,13 @@ class FacePositionTracker:
             min_detection_confidence=settings.min_detection_confidence,
         )
         self._detector = mp.tasks.vision.FaceDetector.create_from_options(options)
-        self._stable = StablePositionTracker(
+        self._position_filter = PositionFilter(
             settings.filter_min_cutoff,
             settings.filter_beta,
             settings.filter_derivative_cutoff,
         )
         self._last_timestamp_ms = -1
+        self._selector = FaceSelector()
 
     def close(self) -> None:
         self._detector.close()
@@ -71,31 +73,47 @@ class FacePositionTracker:
         image = mp.Image(image_format=mp.ImageFormat.SRGB, data=rgb)
         result = self._detector.detect_for_video(image, timestamp_ms)
 
-        camera = self._camera.at(width, height)
-        intrinsics = camera.intrinsics
-        observations = []
-        for candidate in sorted(result.detections or [], key=lambda d:
-                                d.bounding_box.width * d.bounding_box.height, reverse=True):
-            points = candidate.keypoints or []
-            if len(points) < 2 or any(p.x is None or p.y is None for p in points[:2]):
-                continue
-            right = Point2(points[RIGHT_EYE_KEYPOINT].x * width, points[RIGHT_EYE_KEYPOINT].y * height)
-            left = Point2(points[LEFT_EYE_KEYPOINT].x * width, points[LEFT_EYE_KEYPOINT].y * height)
-            center = average_points([left, right])
-            distance = pixel_distance(left, right)
-            if distance < 8:  # Tiny detections make monocular depth ill-conditioned.
-                continue
-            corrected = camera.undistort(np.array([[right.x, right.y], [left.x, left.y]]))
-            corrected_center = Point2(*corrected.mean(axis=0))
-            position = estimate_viewer_position_m(corrected_center, float(np.linalg.norm(corrected[0] - corrected[1])),
-                                                  intrinsics, self.settings.assumed_ipd_m)
-            if position is not None:
-                observations.append((candidate, left, right, center, distance, position))
-        accepted = self._stable.update([item[5] for item in observations], timestamp_ms / 1000.0)
-        if accepted is None:
-            return {"tracking": False, "track_id": self._stable.track_id, "face": None}
-        index, filtered_position = accepted
-        detection, left_eye, right_eye, eye_center, eye_distance, raw_position = observations[index]
+        selected = self._selector.select([
+            (d.bounding_box.origin_x / width, d.bounding_box.origin_y / height,
+             d.bounding_box.width / width, d.bounding_box.height / height)
+            for d in result.detections
+        ], time.monotonic())
+        if selected is None:
+            self._position_filter.reset()
+            return {"tracking": False, "face": None}
+
+        detection = result.detections[selected]
+        keypoints = detection.keypoints or []
+        if len(keypoints) < 2:
+            self._position_filter.reset()
+            return {"tracking": False, "face": None}
+
+        right_eye_keypoint = keypoints[RIGHT_EYE_KEYPOINT]
+        left_eye_keypoint = keypoints[LEFT_EYE_KEYPOINT]
+        if (
+            right_eye_keypoint.x is None
+            or right_eye_keypoint.y is None
+            or left_eye_keypoint.x is None
+            or left_eye_keypoint.y is None
+        ):
+            self._position_filter.reset()
+            return {"tracking": False, "face": None}
+
+        right_eye = Point2(right_eye_keypoint.x * width, right_eye_keypoint.y * height)
+        left_eye = Point2(left_eye_keypoint.x * width, left_eye_keypoint.y * height)
+        eye_center = average_points([left_eye, right_eye])
+        eye_distance = pixel_distance(left_eye, right_eye)
+
+        intrinsics = CameraIntrinsics.from_horizontal_fov(
+            width, height, self.settings.camera_hfov_deg
+        )
+        raw_position = estimate_viewer_position_m(
+            eye_center, eye_distance, intrinsics, self.settings.assumed_ipd_m
+        )
+        timestamp_s = time.monotonic()
+        filtered_position = None
+        if raw_position is not None:
+            filtered_position = self._position_filter.apply(*raw_position, timestamp_s)
 
         bbox = detection.bounding_box
         min_x = float(bbox.origin_x)
@@ -105,7 +123,6 @@ class FacePositionTracker:
 
         return {
             "tracking": True,
-            "track_id": self._stable.track_id,
             "face": {
                 "bbox": {
                     "pixel": {
@@ -140,9 +157,8 @@ class FacePositionTracker:
                             "z": round(filtered_position[2], 6),
                         },
                         "coordinate_system": "x-right_y-up_z-toward-viewer",
-                        "calibrated": False,
-                        "intrinsics_calibrated": intrinsics.calibrated,
-                        "method": "eye-distance-assumed-ipd",
+                        "calibrated": intrinsics.calibrated,
+                        "method": "assumed-horizontal-fov-and-ipd",
                     }
                     if raw_position is not None and filtered_position is not None
                     else None

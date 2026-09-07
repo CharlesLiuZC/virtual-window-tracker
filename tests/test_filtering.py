@@ -1,6 +1,6 @@
 import pytest
 
-from face_tracker.filtering import OneEuroFilter
+from face_tracker.filtering import OneEuroFilter, PositionFilter
 
 
 def test_first_value_is_not_delayed() -> None:
@@ -19,3 +19,11 @@ def test_invalid_cutoff_is_rejected() -> None:
     with pytest.raises(ValueError):
         OneEuroFilter(min_cutoff=0)
 
+
+def test_depth_is_smoothed_more_than_lateral_motion_and_resets():
+    filter_ = PositionFilter(1.2, 0.035, 1.0)
+    filter_.apply(0, 0, 0, 0)
+    x, _, z = filter_.apply(1, 1, 1, 1 / 30)
+    assert 0 < z < x < 1
+    filter_.reset()
+    assert filter_.apply(2, 3, 4, 1) == (2, 3, 4)

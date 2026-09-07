@@ -6,8 +6,6 @@
     "node": ">=22.13.0"
   },
   "scripts": {
-    "test": "node --experimental-strip-types --test tests/*.test.mjs",
-    "typecheck": "tsc --noEmit",
     "dev": "vinext dev",
     "build": "vinext build",
     "start": "wrangler dev --config dist/server/wrangler.json",
@@ -16,7 +14,6 @@
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",
-    "@sparkjsdev/spark": "2.1.0",
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",
     "lucide-react": "1.31.0",

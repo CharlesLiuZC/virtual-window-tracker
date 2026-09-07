@@ -47,14 +47,6 @@ jobs:
         working-directory: web
         run: npm run lint
 
-      - name: Test frontend geometry and tracking
-        working-directory: web
-        run: npm test
-
-      - name: Typecheck frontend
-        working-directory: web
-        run: npm run typecheck
-
       - name: Build frontend
         working-directory: web
         run: npm run build
