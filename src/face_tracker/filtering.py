@@ -87,3 +87,34 @@ class PositionFilter:
         self.x.reset()
         self.y.reset()
         self.z.reset()
+
+class RestAwarePositionFilter:
+    """Position filter that is aware of rest/stationary states."""
+
+    def __init__(
+        self,
+        min_cutoff: float,
+        beta: float,
+        derivative_cutoff: float,
+        rest_threshold: float = 0.01,
+    ) -> None:
+        self.filter = PositionFilter(min_cutoff, beta, derivative_cutoff)
+        self.rest_threshold = rest_threshold
+        self._is_at_rest = False
+
+    def apply(
+        self, x: float, y: float, z: float, timestamp_s: float
+    ) -> tuple[float, float, float]:
+        """Apply position filtering with rest state awareness."""
+        result = self.filter.apply(x, y, z, timestamp_s)
+        # Update rest state based on motion
+        motion = abs(x) + abs(y) + abs(z)
+        self._is_at_rest = motion < self.rest_threshold
+        return result
+
+    def reset(self) -> None:
+        self.filter.reset()
+        self._is_at_rest = False
+
+    def is_at_rest(self) -> bool:
+        return self._is_at_rest
