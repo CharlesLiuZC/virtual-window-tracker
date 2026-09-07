@@ -11,6 +11,14 @@ export class WindowMotion {
 
   constructor(initial: Position) { this.position = { ...initial }; }
 
+  reset(value: Position): Position {
+    Object.assign(this.position, value);
+    this.velocity.x = 0;
+    this.velocity.y = 0;
+    this.velocity.z = 0;
+    return this.position;
+  }
+
   update(target: Position, seconds: number, response: number): Position {
     if (![target.x, target.y, target.z, seconds, response].every(Number.isFinite)
         || seconds <= 0 || response <= 0) return this.position;

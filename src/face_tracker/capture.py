@@ -76,10 +76,10 @@ class LatestCamera:
                 previous, fps, failures = None, 0.0, 0
                 source_fps = capture.get(cv2.CAP_PROP_FPS) if self.pace_file else 0
                 period = 1 / source_fps if math.isfinite(source_fps) and source_fps > 0 else 1 / 30
-                deadline = time.monotonic()
+                deadline = time.perf_counter()
                 while not self.stop.is_set():
                     # Files decode faster than real time; don't drain a replay in one burst.
-                    if self.pace_file and self.stop.wait(max(0, deadline - time.monotonic())):
+                    if self.pace_file and self.stop.wait(max(0, deadline - time.perf_counter())):
                         break
                     ok, frame = capture.read()
                     if not ok:
@@ -89,7 +89,7 @@ class LatestCamera:
                         self.stop.wait(0.05)
                         continue
                     failures = 0
-                    now = time.monotonic()
+                    now = time.perf_counter()
                     deadline = max(deadline + period, now)
                     if previous is not None:
                         instant = 1 / max(now - previous, 1e-6)

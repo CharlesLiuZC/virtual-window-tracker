@@ -77,7 +77,7 @@ class FacePositionTracker:
             (d.bounding_box.origin_x / width, d.bounding_box.origin_y / height,
              d.bounding_box.width / width, d.bounding_box.height / height)
             for d in result.detections
-        ], time.monotonic())
+        ], time.perf_counter())
         if selected is None:
             self._position_filter.reset()
             return {"tracking": False, "face": None}
@@ -110,7 +110,7 @@ class FacePositionTracker:
         raw_position = estimate_viewer_position_m(
             eye_center, eye_distance, intrinsics, self.settings.assumed_ipd_m
         )
-        timestamp_s = time.monotonic()
+        timestamp_s = time.perf_counter()
         filtered_position = None
         if raw_position is not None:
             filtered_position = self._position_filter.apply(*raw_position, timestamp_s)

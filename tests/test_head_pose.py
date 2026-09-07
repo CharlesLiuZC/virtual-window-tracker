@@ -99,7 +99,7 @@ def test_capture_epoch_prevents_using_a_previous_connection():
 def test_service_does_not_publish_stale_cache():
     service = TrackingService(Settings())
     service._latest = {'tracking': True}
-    service._published_monotonic = time.monotonic() - 1
+    service._published_monotonic = time.perf_counter() - 1
     assert service.latest() is None
 
 
@@ -113,7 +113,7 @@ def test_example_calibration_is_not_reported_as_measured(tmp_path):
 def test_disconnection_clears_cache_immediately():
     service = TrackingService(Settings())
     service._latest = {'tracking': True}
-    service._published_monotonic = time.monotonic()
+    service._published_monotonic = time.perf_counter()
     service._set_status('reconnecting')
     assert service.latest() is None
 
@@ -176,7 +176,7 @@ def test_capture_thread_releases_device_and_keeps_only_latest_frame():
         assert sample.image == 3
         assert camera.slot.dropped == 2
         assert camera.is_current(sample)
-        assert sample.monotonic_s <= time.monotonic()
+        assert sample.monotonic_s <= time.perf_counter()
     assert released.wait(1)
     assert not camera.thread.is_alive()
     assert not camera.is_current(sample)
@@ -192,7 +192,7 @@ def test_video_file_replay_is_paced_not_drained_at_decode_speed():
             return 20  # 50 ms between replay frames
 
         def read(self):
-            read_times.append(time.monotonic())
+            read_times.append(time.perf_counter())
             if len(read_times) == 3:
                 ready.set()
             return True, len(read_times)
