@@ -1,0 +1,60 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v10.0.1
+        with:
+          enable-cache: true
+
+      - name: Install Python dependencies
+        run: uv sync --extra dev --locked
+
+      - name: Run backend tests
+        run: uv run pytest
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Install frontend dependencies
+        working-directory: web
+        run: npm ci
+
+      - name: Lint frontend
+        working-directory: web
+        run: npm run lint
+
+      - name: Test frontend geometry and tracking
+        working-directory: web
+        run: npm test
+
+      - name: Typecheck frontend
+        working-directory: web
+        run: npm run typecheck
+
+      - name: Build frontend
+        working-directory: web
+        run: npm run build

@@ -1,0 +1,12 @@
+{
+  "example_only": true,
+  "_warning": "EXAMPLE ONLY: replace with your measured OpenCV calibration; do not use as real calibration.",
+  "model": "pinhole",
+  "width": 1280,
+  "height": 720,
+  "fx": 914.0,
+  "fy": 914.0,
+  "cx": 640.0,
+  "cy": 360.0,
+  "distortion": [0.0, 0.0, 0.0, 0.0, 0.0]
+}

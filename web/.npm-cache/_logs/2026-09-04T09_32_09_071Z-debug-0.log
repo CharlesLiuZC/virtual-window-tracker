@@ -1,0 +1,1859 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@11.16.0
+2 info using node@v24.18.0
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:D:\项目\virtual-window-tracker-main (1)\virtual-window-tracker-main\web\.npmrc
+5 silly config load:file:C:\Users\Charles\.npmrc
+6 silly config load:file:C:\Users\Charles\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install
+8 verbose argv "install" "--cache" ".npm-cache" "--prefer-online"
+9 verbose logfile logs-max:10 dir:D:\项目\virtual-window-tracker-main (1)\virtual-window-tracker-main\web\.npm-cache\_logs\2026-09-04T09_32_09_071Z-
+10 verbose logfile D:\项目\virtual-window-tracker-main (1)\virtual-window-tracker-main\web\.npm-cache\_logs\2026-09-04T09_32_09_071Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+13 silly idealTree buildDeps
+14 silly reify mark retired [
+14 silly reify   'D:\\项目\\virtual-window-tracker-main (1)\\virtual-window-tracker-main\\web\\node_modules\\three'
+14 silly reify ]
+15 silly reify mark retired [
+15 silly reify   'D:\\项目\\virtual-window-tracker-main (1)\\virtual-window-tracker-main\\web\\node_modules\\@base-ui\\react'
+15 silly reify ]
+16 silly reify mark retired [
+16 silly reify   'D:\\项目\\virtual-window-tracker-main (1)\\virtual-window-tracker-main\\web\\node_modules\\webpack'
+16 silly reify ]
+17 silly reify moves {
+17 silly reify   'D:\\项目\\virtual-window-tracker-main (1)\\virtual-window-tracker-main\\web\\node_modules\\three': 'D:\\项目\\virtual-window-tracker-main (1)\\virtual-window-tracker-main\\web\\node_modules\\.three-g0GAnEhD',
+17 silly reify   'D:\\项目\\virtual-window-tracker-main (1)\\virtual-window-tracker-main\\web\\node_modules\\@base-ui\\react': 'D:\\项目\\virtual-window-tracker-main (1)\\virtual-window-tracker-main\\web\\node_modules\\@base-ui\\.react-2Ib1BI6s',
+17 silly reify   'D:\\项目\\virtual-window-tracker-main (1)\\virtual-window-tracker-main\\web\\node_modules\\webpack': 'D:\\项目\\virtual-window-tracker-main (1)\\virtual-window-tracker-main\\web\\node_modules\\.webpack-5lM1gHwL'
+17 silly reify }
+18 silly audit bulk request {
+18 silly audit   '@alloc/quick-lru': [ '5.2.0' ],
+18 silly audit   '@babel/code-frame': [ '7.29.7' ],
+18 silly audit   '@babel/compat-data': [ '7.29.7' ],
+18 silly audit   '@babel/core': [ '7.29.7' ],
+18 silly audit   '@babel/generator': [ '7.29.8' ],
+18 silly audit   '@babel/helper-annotate-as-pure': [ '7.29.7' ],
+18 silly audit   '@babel/helper-compilation-targets': [ '7.29.7' ],
+18 silly audit   '@babel/helper-create-class-features-plugin': [ '7.29.7' ],
+18 silly audit   '@babel/helper-globals': [ '7.29.7' ],
+18 silly audit   '@babel/helper-member-expression-to-functions': [ '7.29.7' ],
+18 silly audit   '@babel/helper-module-imports': [ '7.29.7' ],
+18 silly audit   '@babel/helper-module-transforms': [ '7.29.7' ],
+18 silly audit   '@babel/helper-optimise-call-expression': [ '7.29.7' ],
+18 silly audit   '@babel/helper-plugin-utils': [ '7.29.7' ],
+18 silly audit   '@babel/helper-replace-supers': [ '7.29.7' ],
+18 silly audit   '@babel/helper-skip-transparent-expression-wrappers': [ '7.29.7' ],
+18 silly audit   '@babel/helper-string-parser': [ '7.29.7' ],
+18 silly audit   '@babel/helper-validator-identifier': [ '7.29.7' ],
+18 silly audit   '@babel/helper-validator-option': [ '7.29.7' ],
+18 silly audit   '@babel/helpers': [ '7.29.7' ],
+18 silly audit   '@babel/parser': [ '7.29.8' ],
+18 silly audit   '@babel/plugin-syntax-jsx': [ '7.29.7' ],
+18 silly audit   '@babel/plugin-syntax-typescript': [ '7.29.7' ],
+18 silly audit   '@babel/plugin-transform-modules-commonjs': [ '7.29.7' ],
+18 silly audit   '@babel/plugin-transform-typescript': [ '7.29.7' ],
+18 silly audit   '@babel/preset-typescript': [ '7.29.7' ],
+18 silly audit   '@babel/runtime': [ '7.29.7' ],
+18 silly audit   '@babel/template': [ '7.29.7' ],
+18 silly audit   '@babel/traverse': [ '7.29.8' ],
+18 silly audit   '@babel/types': [ '7.29.8' ],
+18 silly audit   '@base-ui/react': [ '1.7.0' ],
+18 silly audit   '@base-ui/utils': [ '0.3.2' ],
+18 silly audit   '@cloudflare/kv-asset-handler': [ '0.5.0' ],
+18 silly audit   '@cloudflare/unenv-preset': [ '2.16.1' ],
+18 silly audit   '@cloudflare/vite-plugin': [ '1.37.1' ],
+18 silly audit   '@cloudflare/workerd-darwin-64': [ '1.20260515.1' ],
+18 silly audit   '@cloudflare/workerd-darwin-arm64': [ '1.20260515.1' ],
+18 silly audit   '@cloudflare/workerd-linux-64': [ '1.20260515.1' ],
+18 silly audit   '@cloudflare/workerd-linux-arm64': [ '1.20260515.1' ],
+18 silly audit   '@cloudflare/workerd-windows-64': [ '1.20260515.1' ],
+18 silly audit   '@cloudflare/workers-types': [ '4.20260515.1' ],
+18 silly audit   '@cspotcode/source-map-support': [ '0.8.1' ],
+18 silly audit   '@jridgewell/trace-mapping': [ '0.3.9', '0.3.31' ],
+18 silly audit   '@dimforge/rapier3d-compat': [ '0.12.0' ],
+18 silly audit   '@dotenvx/dotenvx': [ '1.75.1' ],
+18 silly audit   commander: [ '11.1.0', '14.0.3', '2.20.3' ],
+18 silly audit   'define-lazy-prop': [ '2.0.0', '3.0.0' ],
+18 silly audit   execa: [ '5.1.1', '9.6.1' ],
+18 silly audit   'get-stream': [ '6.0.1', '9.0.1' ],
+18 silly audit   'human-signals': [ '2.1.0', '8.0.1' ],
+18 silly audit   'is-docker': [ '2.2.1', '3.0.0' ],
+18 silly audit   'is-stream': [ '2.0.1', '4.0.1' ],
+18 silly audit   'is-wsl': [ '2.2.0', '3.1.1' ],
+18 silly audit   'npm-run-path': [ '4.0.1', '6.0.0' ],
+18 silly audit   open: [ '8.4.2', '11.0.2' ],
+18 silly audit   'signal-exit': [ '3.0.7', '4.1.0' ],
+18 silly audit   'strip-final-newline': [ '2.0.0', '4.0.0' ],
+18 silly audit   '@dotenvx/primitives': [ '0.8.0' ],
+18 silly audit   '@emnapi/core': [ '1.10.0' ],
+18 silly audit   '@emnapi/runtime': [ '1.11.3', '1.10.0' ],
+18 silly audit   '@emnapi/wasi-threads': [ '1.2.1' ],
+18 silly audit   '@esbuild/aix-ppc64': [ '0.27.3' ],
+18 silly audit   '@esbuild/android-arm': [ '0.27.3' ],
+18 silly audit   '@esbuild/android-arm64': [ '0.27.3' ],
+18 silly audit   '@esbuild/android-x64': [ '0.27.3' ],
+18 silly audit   '@esbuild/darwin-arm64': [ '0.27.3' ],
+18 silly audit   '@esbuild/darwin-x64': [ '0.27.3' ],
+18 silly audit   '@esbuild/freebsd-arm64': [ '0.27.3' ],
+18 silly audit   '@esbuild/freebsd-x64': [ '0.27.3' ],
+18 silly audit   '@esbuild/linux-arm': [ '0.27.3' ],
+18 silly audit   '@esbuild/linux-arm64': [ '0.27.3' ],
+18 silly audit   '@esbuild/linux-ia32': [ '0.27.3' ],
+18 silly audit   '@esbuild/linux-loong64': [ '0.27.3' ],
+18 silly audit   '@esbuild/linux-mips64el': [ '0.27.3' ],
+18 silly audit   '@esbuild/linux-ppc64': [ '0.27.3' ],
+18 silly audit   '@esbuild/linux-riscv64': [ '0.27.3' ],
+18 silly audit   '@esbuild/linux-s390x': [ '0.27.3' ],
+18 silly audit   '@esbuild/linux-x64': [ '0.27.3' ],
+18 silly audit   '@esbuild/netbsd-arm64': [ '0.27.3' ],
+18 silly audit   '@esbuild/netbsd-x64': [ '0.27.3' ],
+18 silly audit   '@esbuild/openbsd-arm64': [ '0.27.3' ],
+18 silly audit   '@esbuild/openbsd-x64': [ '0.27.3' ],
+18 silly audit   '@esbuild/openharmony-arm64': [ '0.27.3' ],
+18 silly audit   '@esbuild/sunos-x64': [ '0.27.3' ],
+18 silly audit   '@esbuild/win32-arm64': [ '0.27.3' ],
+18 silly audit   '@esbuild/win32-ia32': [ '0.27.3' ],
+18 silly audit   '@esbuild/win32-x64': [ '0.27.3' ],
+18 silly audit   '@floating-ui/core': [ '1.8.0' ],
+18 silly audit   '@floating-ui/dom': [ '1.8.0' ],
+18 silly audit   '@floating-ui/react-dom': [ '2.1.9' ],
+18 silly audit   '@floating-ui/utils': [ '0.2.12' ],
+18 silly audit   '@hono/node-server': [ '2.1.1' ],
+18 silly audit   '@img/colour': [ '1.1.0' ],
+18 silly audit   '@img/sharp-darwin-arm64': [ '0.34.5' ],
+18 silly audit   '@img/sharp-darwin-x64': [ '0.34.5' ],
+18 silly audit   '@img/sharp-libvips-darwin-arm64': [ '1.2.4' ],
+18 silly audit   '@img/sharp-libvips-darwin-x64': [ '1.2.4' ],
+18 silly audit   '@img/sharp-libvips-linux-arm': [ '1.2.4' ],
+18 silly audit   '@img/sharp-libvips-linux-arm64': [ '1.2.4' ],
+18 silly audit   '@img/sharp-libvips-linux-ppc64': [ '1.2.4' ],
+18 silly audit   '@img/sharp-libvips-linux-riscv64': [ '1.2.4' ],
+18 silly audit   '@img/sharp-libvips-linux-s390x': [ '1.2.4' ],
+18 silly audit   '@img/sharp-libvips-linux-x64': [ '1.2.4' ],
+18 silly audit   '@img/sharp-libvips-linuxmusl-arm64': [ '1.2.4' ],
+18 silly audit   '@img/sharp-libvips-linuxmusl-x64': [ '1.2.4' ],
+18 silly audit   '@img/sharp-linux-arm': [ '0.34.5' ],
+18 silly audit   '@img/sharp-linux-arm64': [ '0.34.5' ],
+18 silly audit   '@img/sharp-linux-ppc64': [ '0.34.5' ],
+18 silly audit   '@img/sharp-linux-riscv64': [ '0.34.5' ],
+18 silly audit   '@img/sharp-linux-s390x': [ '0.34.5' ],
+18 silly audit   '@img/sharp-linux-x64': [ '0.34.5' ],
+18 silly audit   '@img/sharp-linuxmusl-arm64': [ '0.34.5' ],
+18 silly audit   '@img/sharp-linuxmusl-x64': [ '0.34.5' ],
+18 silly audit   '@img/sharp-wasm32': [ '0.34.5' ],
+18 silly audit   '@img/sharp-win32-arm64': [ '0.34.5' ],
+18 silly audit   '@img/sharp-win32-ia32': [ '0.34.5' ],
+18 silly audit   '@img/sharp-win32-x64': [ '0.34.5' ],
+18 silly audit   '@jridgewell/gen-mapping': [ '0.3.13' ],
+18 silly audit   '@jridgewell/remapping': [ '2.3.5' ],
+18 silly audit   '@jridgewell/resolve-uri': [ '3.1.2' ],
+18 silly audit   '@jridgewell/source-map': [ '0.3.11' ],
+18 silly audit   '@jridgewell/sourcemap-codec': [ '1.6.0' ],
+18 silly audit   '@modelcontextprotocol/sdk': [ '1.30.0' ],
+18 silly audit   '@napi-rs/wasm-runtime': [ '1.2.3' ],
+18 silly audit   '@nodelib/fs.scandir': [ '2.1.5' ],
+18 silly audit   '@nodelib/fs.stat': [ '2.0.5' ],
+18 silly audit   '@nodelib/fs.walk': [ '1.2.8' ],
+18 silly audit   '@openai/sites-vite-plugin': [ '0.2.0' ],
+18 silly audit   '@oxc-project/types': [ '0.130.0' ],
+18 silly audit   '@oxfmt/binding-android-arm-eabi': [ '0.61.0' ],
+18 silly audit   '@oxfmt/binding-android-arm64': [ '0.61.0' ],
+18 silly audit   '@oxfmt/binding-darwin-arm64': [ '0.61.0' ],
+18 silly audit   '@oxfmt/binding-darwin-x64': [ '0.61.0' ],
+18 silly audit   '@oxfmt/binding-freebsd-x64': [ '0.61.0' ],
+18 silly audit   '@oxfmt/binding-linux-arm-gnueabihf': [ '0.61.0' ],
+18 silly audit   '@oxfmt/binding-linux-arm-musleabihf': [ '0.61.0' ],
+18 silly audit   '@oxfmt/binding-linux-arm64-gnu': [ '0.61.0' ],
+18 silly audit   '@oxfmt/binding-linux-arm64-musl': [ '0.61.0' ],
+18 silly audit   '@oxfmt/binding-linux-ppc64-gnu': [ '0.61.0' ],
+18 silly audit   '@oxfmt/binding-linux-riscv64-gnu': [ '0.61.0' ],
+18 silly audit   '@oxfmt/binding-linux-riscv64-musl': [ '0.61.0' ],
+18 silly audit   '@oxfmt/binding-linux-s390x-gnu': [ '0.61.0' ],
+18 silly audit   '@oxfmt/binding-linux-x64-gnu': [ '0.61.0' ],
+18 silly audit   '@oxfmt/binding-linux-x64-musl': [ '0.61.0' ],
+18 silly audit   '@oxfmt/binding-openharmony-arm64': [ '0.61.0' ],
+18 silly audit   '@oxfmt/binding-win32-arm64-msvc': [ '0.61.0' ],
+18 silly audit   '@oxfmt/binding-win32-ia32-msvc': [ '0.61.0' ],
+18 silly audit   '@oxfmt/binding-win32-x64-msvc': [ '0.61.0' ],
+18 silly audit   '@oxlint-tsgolint/darwin-arm64': [ '7.0.2001' ],
+18 silly audit   '@oxlint-tsgolint/darwin-x64': [ '7.0.2001' ],
+18 silly audit   '@oxlint-tsgolint/linux-arm64': [ '7.0.2001' ],
+18 silly audit   '@oxlint-tsgolint/linux-x64': [ '7.0.2001' ],
+18 silly audit   '@oxlint-tsgolint/win32-arm64': [ '7.0.2001' ],
+18 silly audit   '@oxlint-tsgolint/win32-x64': [ '7.0.2001' ],
+18 silly audit   '@oxlint/binding-android-arm-eabi': [ '1.76.0' ],
+18 silly audit   '@oxlint/binding-android-arm64': [ '1.76.0' ],
+18 silly audit   '@oxlint/binding-darwin-arm64': [ '1.76.0' ],
+18 silly audit   '@oxlint/binding-darwin-x64': [ '1.76.0' ],
+18 silly audit   '@oxlint/binding-freebsd-x64': [ '1.76.0' ],
+18 silly audit   '@oxlint/binding-linux-arm-gnueabihf': [ '1.76.0' ],
+18 silly audit   '@oxlint/binding-linux-arm-musleabihf': [ '1.76.0' ],
+18 silly audit   '@oxlint/binding-linux-arm64-gnu': [ '1.76.0' ],
+18 silly audit   '@oxlint/binding-linux-arm64-musl': [ '1.76.0' ],
+18 silly audit   '@oxlint/binding-linux-ppc64-gnu': [ '1.76.0' ],
+18 silly audit   '@oxlint/binding-linux-riscv64-gnu': [ '1.76.0' ],
+18 silly audit   '@oxlint/binding-linux-riscv64-musl': [ '1.76.0' ],
+18 silly audit   '@oxlint/binding-linux-s390x-gnu': [ '1.76.0' ],
+18 silly audit   '@oxlint/binding-linux-x64-gnu': [ '1.76.0' ],
+18 silly audit   '@oxlint/binding-linux-x64-musl': [ '1.76.0' ],
+18 silly audit   '@oxlint/binding-openharmony-arm64': [ '1.76.0' ],
+18 silly audit   '@oxlint/binding-win32-arm64-msvc': [ '1.76.0' ],
+18 silly audit   '@oxlint/binding-win32-ia32-msvc': [ '1.76.0' ],
+18 silly audit   '@oxlint/binding-win32-x64-msvc': [ '1.76.0' ],
+18 silly audit   '@poppinss/colors': [ '4.1.6' ],
+18 silly audit   '@poppinss/dumper': [ '0.6.5' ],
+18 silly audit   'supports-color': [ '10.2.2', '8.1.1' ],
+18 silly audit   '@poppinss/exception': [ '1.2.3' ],
+18 silly audit   '@resvg/resvg-wasm': [ '2.4.0' ],
+18 silly audit   '@rolldown/binding-android-arm64': [ '1.0.1' ],
+18 silly audit   '@rolldown/binding-darwin-arm64': [ '1.0.1' ],
+18 silly audit   '@rolldown/binding-darwin-x64': [ '1.0.1' ],
+18 silly audit   '@rolldown/binding-freebsd-x64': [ '1.0.1' ],
+18 silly audit   '@rolldown/binding-linux-arm-gnueabihf': [ '1.0.1' ],
+18 silly audit   '@rolldown/binding-linux-arm64-gnu': [ '1.0.1' ],
+18 silly audit   '@rolldown/binding-linux-arm64-musl': [ '1.0.1' ],
+18 silly audit   '@rolldown/binding-linux-ppc64-gnu': [ '1.0.1' ],
+18 silly audit   '@rolldown/binding-linux-s390x-gnu': [ '1.0.1' ],
+18 silly audit   '@rolldown/binding-linux-x64-gnu': [ '1.0.1' ],
+18 silly audit   '@rolldown/binding-linux-x64-musl': [ '1.0.1' ],
+18 silly audit   '@rolldown/binding-openharmony-arm64': [ '1.0.1' ],
+18 silly audit   '@rolldown/binding-wasm32-wasi': [ '1.0.1' ],
+18 silly audit   '@rolldown/binding-win32-arm64-msvc': [ '1.0.1' ],
+18 silly audit   '@rolldown/binding-win32-x64-msvc': [ '1.0.1' ],
+18 silly audit   '@rolldown/pluginutils': [ '1.0.1', '1.0.0-rc.18' ],
+18 silly audit   '@sec-ant/readable-stream': [ '0.4.1' ],
+18 silly audit   '@shuding/opentype.js': [ '1.4.0-beta.0' ],
+18 silly audit   '@sindresorhus/is': [ '7.2.0' ],
+18 silly audit   '@sindresorhus/merge-streams': [ '4.0.0' ],
+18 silly audit   '@speed-highlight/core': [ '1.2.24' ],
+18 silly audit   '@tailwindcss/node': [ '4.2.1' ],
+18 silly audit   '@tailwindcss/oxide': [ '4.2.1' ],
+18 silly audit   '@tailwindcss/oxide-android-arm64': [ '4.2.1' ],
+18 silly audit   '@tailwindcss/oxide-darwin-arm64': [ '4.2.1' ],
+18 silly audit   '@tailwindcss/oxide-darwin-x64': [ '4.2.1' ],
+18 silly audit   '@tailwindcss/oxide-freebsd-x64': [ '4.2.1' ],
+18 silly audit   '@tailwindcss/oxide-linux-arm-gnueabihf': [ '4.2.1' ],
+18 silly audit   '@tailwindcss/oxide-linux-arm64-gnu': [ '4.2.1' ],
+18 silly audit   '@tailwindcss/oxide-linux-arm64-musl': [ '4.2.1' ],
+18 silly audit   '@tailwindcss/oxide-linux-x64-gnu': [ '4.2.1' ],
+18 silly audit   '@tailwindcss/oxide-linux-x64-musl': [ '4.2.1' ],
+18 silly audit   '@tailwindcss/oxide-wasm32-wasi': [ '4.2.1' ],
+18 silly audit   '@tailwindcss/oxide-win32-arm64-msvc': [ '4.2.1' ],
+18 silly audit   '@tailwindcss/oxide-win32-x64-msvc': [ '4.2.1' ],
+18 silly audit   '@tailwindcss/postcss': [ '4.2.1' ],
+18 silly audit   '@ts-morph/common': [ '0.27.0' ],
+18 silly audit   '@tweenjs/tween.js': [ '23.1.3' ],
+18 silly audit   '@tybys/wasm-util': [ '0.10.3' ],
+18 silly audit   '@types/estree': [ '1.0.9' ],
+18 silly audit   '@types/json-schema': [ '7.0.15' ],
+18 silly audit   '@types/node': [ '22.19.19' ],
+18 silly audit   '@types/react': [ '19.2.14' ],
+18 silly audit   '@types/react-dom': [ '19.2.3' ],
+18 silly audit   '@types/stats.js': [ '0.17.4' ],
+18 silly audit   '@types/three': [ '0.185.4' ],
+18 silly audit   fflate: [ '0.8.3', '0.7.5' ],
+18 silly audit   '@types/validate-npm-package-name': [ '4.0.2' ],
+18 silly audit   '@types/webxr': [ '0.5.24' ],
+18 silly audit   '@unpic/core': [ '1.0.3' ],
+18 silly audit   '@unpic/react': [ '1.0.2' ],
+18 silly audit   '@vercel/og': [ '0.8.6' ],
+18 silly audit   '@vinext/types': [ '1.0.0-beta.2' ],
+18 silly audit   '@vitejs/plugin-react': [ '6.0.2' ],
+18 silly audit   '@vitejs/plugin-rsc': [ '0.5.26' ],
+18 silly audit   '@webassemblyjs/ast': [ '1.14.1' ],
+18 silly audit   '@webassemblyjs/floating-point-hex-parser': [ '1.13.2' ],
+18 silly audit   '@webassemblyjs/helper-api-error': [ '1.13.2' ],
+18 silly audit   '@webassemblyjs/helper-buffer': [ '1.14.1' ],
+18 silly audit   '@webassemblyjs/helper-numbers': [ '1.13.2' ],
+18 silly audit   '@webassemblyjs/helper-wasm-bytecode': [ '1.13.2' ],
+18 silly audit   '@webassemblyjs/helper-wasm-section': [ '1.14.1' ],
+18 silly audit   '@webassemblyjs/ieee754': [ '1.13.2' ],
+18 silly audit   '@webassemblyjs/leb128': [ '1.13.2' ],
+18 silly audit   '@webassemblyjs/utf8': [ '1.13.2' ],
+18 silly audit   '@webassemblyjs/wasm-edit': [ '1.14.1' ],
+18 silly audit   '@webassemblyjs/wasm-gen': [ '1.14.1' ],
+18 silly audit   '@webassemblyjs/wasm-opt': [ '1.14.1' ],
+18 silly audit   '@webassemblyjs/wasm-parser': [ '1.14.1' ],
+18 silly audit   '@webassemblyjs/wast-printer': [ '1.14.1' ],
+18 silly audit   '@xtuc/ieee754': [ '1.2.0' ],
+18 silly audit   '@xtuc/long': [ '4.2.2' ],
+18 silly audit   accepts: [ '2.0.0' ],
+18 silly audit   acorn: [ '8.18.0' ],
+18 silly audit   'acorn-loose': [ '8.5.2' ],
+18 silly audit   ajv: [ '8.20.0' ],
+18 silly audit   'ajv-formats': [ '3.0.1', '2.1.1' ],
+18 silly audit   'ajv-keywords': [ '5.1.0' ],
+18 silly audit   'ansi-colors': [ '4.1.3' ],
+18 silly audit   'ansi-regex': [ '5.0.1', '6.3.0' ],
+18 silly audit   argparse: [ '2.0.1' ],
+18 silly audit   'ast-types': [ '0.16.3' ],
+18 silly audit   atomically: [ '1.7.0' ],
+18 silly audit   'balanced-match': [ '4.0.4' ],
+18 silly audit   'base64-js': [ '0.0.8' ],
+18 silly audit   'baseline-browser-mapping': [ '2.11.20' ],
+18 silly audit   'blake3-wasm': [ '2.1.5' ],
+18 silly audit   'body-parser': [ '2.3.0' ],
+18 silly audit   'content-type': [ '2.1.0', '1.0.5' ],
+18 silly audit   'brace-expansion': [ '5.0.9' ],
+18 silly audit   braces: [ '3.0.3' ],
+18 silly audit   browserslist: [ '4.28.8' ],
+18 silly audit   'buffer-from': [ '1.1.2' ],
+18 silly audit   'bundle-name': [ '4.1.0' ],
+18 silly audit   bytes: [ '3.1.2' ],
+18 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+18 silly audit   'call-bound': [ '1.0.4' ],
+18 silly audit   callsites: [ '3.1.0' ],
+18 silly audit   camelize: [ '1.0.1' ],
+18 silly audit   'caniuse-lite': [ '1.0.30001810' ],
+18 silly audit   chalk: [ '5.6.2' ],
+18 silly audit   'chrome-trace-event': [ '1.0.4' ],
+18 silly audit   'class-variance-authority': [ '0.7.1' ],
+18 silly audit   'cli-cursor': [ '5.0.0' ],
+18 silly audit   'cli-spinners': [ '2.9.2' ],
+18 silly audit   clsx: [ '2.1.1' ],
+18 silly audit   'code-block-writer': [ '13.0.3' ],
+18 silly audit   'color-name': [ '1.1.4' ],
+18 silly audit   conf: [ '10.2.0' ],
+18 silly audit   'json-schema-typed': [ '7.0.3', '8.0.2' ],
+18 silly audit   semver: [ '7.8.5', '6.3.1' ],
+18 silly audit   'content-disposition': [ '1.1.0' ],
+18 silly audit   'convert-source-map': [ '2.0.0' ],
+18 silly audit   cookie: [ '0.7.2', '1.1.1' ],
+18 silly audit   'cookie-signature': [ '1.2.2' ],
+18 silly audit   cors: [ '2.8.6' ],
+18 silly audit   cosmiconfig: [ '9.0.2' ],
+18 silly audit   'cross-spawn': [ '7.0.6' ],
+18 silly audit   isexe: [ '2.0.0', '3.1.5' ],
+18 silly audit   which: [ '2.0.2', '4.0.0' ],
+18 silly audit   'css-background-parser': [ '0.1.0' ],
+18 silly audit   'css-box-shadow': [ '1.0.0-3' ],
+18 silly audit   'css-color-keywords': [ '1.0.0' ],
+18 silly audit   'css-gradient-parser': [ '0.0.16' ],
+18 silly audit   'css-to-react-native': [ '3.2.0' ],
+18 silly audit   cssesc: [ '3.0.0' ],
+18 silly audit   csstype: [ '3.2.3' ],
+18 silly audit   'debounce-fn': [ '4.0.0' ],
+18 silly audit   debug: [ '4.4.3' ],
+18 silly audit   dedent: [ '1.7.2' ],
+18 silly audit   deepmerge: [ '4.3.1' ],
+18 silly audit   'default-browser': [ '5.5.1' ],
+18 silly audit   'default-browser-id': [ '5.0.1' ],
+18 silly audit   depd: [ '2.0.0' ],
+18 silly audit   'detect-libc': [ '2.1.2' ],
+18 silly audit   diff: [ '8.0.4' ],
+18 silly audit   'dot-prop': [ '6.0.1' ],
+18 silly audit   dotenv: [ '17.4.2' ],
+18 silly audit   'dunder-proto': [ '1.0.1' ],
+18 silly audit   'ee-first': [ '1.1.1' ],
+18 silly audit   'electron-to-chromium': [ '1.5.417' ],
+18 silly audit   'emoji-regex': [ '10.6.0' ],
+18 silly audit   'emoji-regex-xs': [ '2.0.1' ],
+18 silly audit   encodeurl: [ '2.0.0' ],
+18 silly audit   'enhanced-resolve': [ '5.24.5' ],
+18 silly audit   enquirer: [ '2.4.1' ],
+18 silly audit   'env-paths': [ '2.2.1' ],
+18 silly audit   'error-ex': [ '1.3.4' ],
+18 silly audit   'error-stack-parser-es': [ '1.0.5' ],
+18 silly audit   'es-define-property': [ '1.0.1' ],
+18 silly audit   'es-errors': [ '1.3.0' ],
+18 silly audit   'es-module-lexer': [ '2.3.2', '1.7.0' ],
+18 silly audit   'es-object-atoms': [ '1.1.2' ],
+18 silly audit   esbuild: [ '0.27.3' ],
+18 silly audit   escalade: [ '3.2.0' ],
+18 silly audit   'escape-html': [ '1.0.3' ],
+18 silly audit   esprima: [ '4.0.1' ],
+18 silly audit   'estree-walker': [ '3.0.3' ],
+18 silly audit   etag: [ '1.8.1' ],
+18 silly audit   events: [ '3.3.0' ],
+18 silly audit   eventsource: [ '3.0.7' ],
+18 silly audit   'eventsource-parser': [ '3.1.1' ],
+18 silly audit   express: [ '5.2.1' ],
+18 silly audit   'express-rate-limit': [ '8.7.0' ],
+18 silly audit   'fast-deep-equal': [ '3.1.3' ],
+18 silly audit   'fast-glob': [ '3.3.3' ],
+18 silly audit   'fast-uri': [ '3.1.6' ],
+18 silly audit   fastq: [ '1.20.3' ],
+18 silly audit   fdir: [ '6.5.0' ],
+18 silly audit   figures: [ '6.1.0' ],
+18 silly audit   'fill-range': [ '7.1.1' ],
+18 silly audit   finalhandler: [ '2.1.1' ],
+18 silly audit   'find-up': [ '3.0.0' ],
+18 silly audit   forwarded: [ '0.2.0' ],
+18 silly audit   fresh: [ '2.0.0' ],
+18 silly audit   'fs-extra': [ '11.4.0' ],
+18 silly audit   fsevents: [ '2.3.3' ],
+18 silly audit   'function-bind': [ '1.1.2' ],
+18 silly audit   fuzzysort: [ '3.1.0' ],
+18 silly audit   gensync: [ '1.0.0-beta.2' ],
+18 silly audit   'get-east-asian-width': [ '1.6.0' ],
+18 silly audit   'get-intrinsic': [ '1.3.0' ],
+18 silly audit   'get-own-enumerable-keys': [ '1.0.0' ],
+18 silly audit   'get-proto': [ '1.0.1' ],
+18 silly audit   'glob-parent': [ '5.1.2' ],
+18 silly audit   gopd: [ '1.2.0' ],
+18 silly audit   'graceful-fs': [ '4.2.11' ],
+18 silly audit   'has-flag': [ '4.0.0' ],
+18 silly audit   'has-symbols': [ '1.1.0' ],
+18 silly audit   hasown: [ '2.0.4' ],
+18 silly audit   'hex-rgb': [ '4.3.0' ],
+18 silly audit   hono: [ '4.13.5' ],
+18 silly audit   'http-errors': [ '2.0.1' ],
+18 silly audit   'iconv-lite': [ '0.7.3' ],
+18 silly audit   ignore: [ '5.3.2' ],
+18 silly audit   'image-size': [ '2.0.2' ],
+18 silly audit   'import-fresh': [ '3.3.1' ],
+18 silly audit   inherits: [ '2.0.4' ],
+18 silly audit   'ip-address': [ '10.7.0' ],
+18 silly audit   'ipaddr.js': [ '1.9.1', '2.5.0' ],
+18 silly audit   'is-arrayish': [ '0.2.1' ],
+18 silly audit   'is-extglob': [ '2.1.1' ],
+18 silly audit   'is-glob': [ '4.0.3' ],
+18 silly audit   'is-in-ssh': [ '1.0.0' ],
+18 silly audit   'is-inside-container': [ '1.0.0' ],
+18 silly audit   'is-interactive': [ '2.0.0' ],
+18 silly audit   'is-number': [ '7.0.0' ],
+18 silly audit   'is-obj': [ '2.0.0', '3.0.0' ],
+18 silly audit   'is-plain-obj': [ '4.1.0' ],
+18 silly audit   'is-promise': [ '4.0.0' ],
+18 silly audit   'is-regexp': [ '3.1.0' ],
+18 silly audit   'is-unicode-supported': [ '2.1.0', '1.3.0' ],
+18 silly audit   'jest-worker': [ '27.5.1' ],
+18 silly audit   jiti: [ '2.7.0' ],
+18 silly audit   jose: [ '6.2.10' ],
+18 silly audit   'js-tokens': [ '4.0.0', '9.0.1' ],
+18 silly audit   'js-yaml': [ '4.3.2' ],
+18 silly audit   jsesc: [ '3.1.0' ],
+18 silly audit   'json-parse-even-better-errors': [ '2.3.1' ],
+18 silly audit   'json-schema-traverse': [ '1.0.0' ],
+18 silly audit   json5: [ '2.2.3' ],
+18 silly audit   jsonfile: [ '6.2.1' ],
+18 silly audit   kleur: [ '4.1.5', '3.0.3' ],
+18 silly audit   lightningcss: [ '1.31.1', '1.33.0' ],
+18 silly audit   'lightningcss-android-arm64': [ '1.31.1', '1.33.0' ],
+18 silly audit   'lightningcss-darwin-arm64': [ '1.31.1', '1.33.0' ],
+18 silly audit   'lightningcss-darwin-x64': [ '1.31.1', '1.33.0' ],
+18 silly audit   'lightningcss-freebsd-x64': [ '1.31.1', '1.33.0' ],
+18 silly audit   'lightningcss-linux-arm-gnueabihf': [ '1.31.1', '1.33.0' ],
+18 silly audit   'lightningcss-linux-arm64-gnu': [ '1.31.1', '1.33.0' ],
+18 silly audit   'lightningcss-linux-arm64-musl': [ '1.31.1', '1.33.0' ],
+18 silly audit   'lightningcss-linux-x64-gnu': [ '1.31.1', '1.33.0' ],
+18 silly audit   'lightningcss-linux-x64-musl': [ '1.31.1', '1.33.0' ],
+18 silly audit   'lightningcss-win32-arm64-msvc': [ '1.31.1', '1.33.0' ],
+18 silly audit   'lightningcss-win32-x64-msvc': [ '1.31.1', '1.33.0' ],
+18 silly audit   linebreak: [ '1.1.0' ],
+18 silly audit   'lines-and-columns': [ '1.2.4' ],
+18 silly audit   'locate-path': [ '3.0.0' ],
+18 silly audit   'log-symbols': [ '6.0.0' ],
+18 silly audit   'lru-cache': [ '5.1.1' ],
+18 silly audit   'lucide-react': [ '1.31.0' ],
+18 silly audit   'magic-string': [ '0.30.21' ],
+18 silly audit   'math-intrinsics': [ '1.1.0' ],
+18 silly audit   'media-typer': [ '1.1.1' ],
+18 silly audit   'merge-descriptors': [ '2.0.0' ],
+18 silly audit   'merge-stream': [ '2.0.0' ],
+18 silly audit   merge2: [ '1.4.1' ],
+18 silly audit   meshoptimizer: [ '1.1.1' ],
+18 silly audit   micromatch: [ '4.0.8' ],
+18 silly audit   picomatch: [ '2.3.2', '4.0.7' ],
+18 silly audit   'mime-db': [ '1.54.0' ],
+18 silly audit   'mime-types': [ '3.0.2' ],
+18 silly audit   'mimic-fn': [ '3.1.0', '2.1.0' ],
+18 silly audit   'mimic-function': [ '5.0.1' ],
+18 silly audit   miniflare: [ '4.20260515.0' ],
+18 silly audit   minimatch: [ '10.2.6' ],
+18 silly audit   minimist: [ '1.2.8' ],
+18 silly audit   'minimizer-webpack-plugin': [ '5.8.0' ],
+18 silly audit   ms: [ '2.1.3' ],
+18 silly audit   nanoid: [ '3.3.18' ],
+18 silly audit   negotiator: [ '1.1.0' ],
+18 silly audit   'neo-async': [ '2.6.2' ],
+18 silly audit   'node-releases': [ '2.0.54' ],
+18 silly audit   'path-key': [ '4.0.0', '3.1.1' ],
+18 silly audit   'object-assign': [ '4.1.1' ],
+18 silly audit   'object-inspect': [ '1.13.4' ],
+18 silly audit   'object-treeify': [ '1.1.33' ],
+18 silly audit   'on-finished': [ '2.4.1' ],
+18 silly audit   once: [ '1.4.0' ],
+18 silly audit   onetime: [ '5.1.2', '7.0.0' ],
+18 silly audit   ora: [ '8.2.0' ],
+18 silly audit   'strip-ansi': [ '7.2.0', '6.0.1' ],
+18 silly audit   oxfmt: [ '0.61.0' ],
+18 silly audit   oxlint: [ '1.76.0' ],
+18 silly audit   'oxlint-tsgolint': [ '7.0.2001' ],
+18 silly audit   'p-limit': [ '2.3.0' ],
+18 silly audit   'p-locate': [ '3.0.0' ],
+18 silly audit   'p-try': [ '2.2.0' ],
+18 silly audit   pako: [ '0.2.9' ],
+18 silly audit   'parent-module': [ '1.0.1' ],
+18 silly audit   'parse-css-color': [ '0.2.1' ],
+18 silly audit   'parse-json': [ '5.2.0' ],
+18 silly audit   'parse-ms': [ '4.0.0' ],
+18 silly audit   parseurl: [ '1.3.3' ],
+18 silly audit   'path-browserify': [ '1.0.1' ],
+18 silly audit   'path-exists': [ '3.0.0' ],
+18 silly audit   'path-to-regexp': [ '8.4.2', '6.3.0' ],
+18 silly audit   pathe: [ '2.0.3' ],
+18 silly audit   picocolors: [ '1.1.1' ],
+18 silly audit   'pkce-challenge': [ '5.0.1' ],
+18 silly audit   'pkg-up': [ '3.1.0' ],
+18 silly audit   postcss: [ '8.5.26' ],
+18 silly audit   'postcss-selector-parser': [ '7.1.5' ],
+18 silly audit   'postcss-value-parser': [ '4.2.0' ],
+18 silly audit   'powershell-utils': [ '0.2.1', '0.1.0' ],
+18 silly audit   'pretty-ms': [ '9.3.1' ],
+18 silly audit   prompts: [ '2.4.2' ],
+18 silly audit   'proxy-addr': [ '2.0.7' ],
+18 silly audit   qs: [ '6.16.0' ],
+18 silly audit   'queue-microtask': [ '1.2.3' ],
+18 silly audit   'range-parser': [ '1.3.0' ],
+18 silly audit   'raw-body': [ '3.0.2' ],
+18 silly audit   react: [ '19.2.6' ],
+18 silly audit   'react-dom': [ '19.2.6' ],
+18 silly audit   'react-server-dom-webpack': [ '19.2.6' ],
+18 silly audit   recast: [ '0.23.21' ],
+18 silly audit   'require-from-string': [ '2.0.2' ],
+18 silly audit   reselect: [ '5.3.0' ],
+18 silly audit   'resolve-from': [ '4.0.0' ],
+18 silly audit   'restore-cursor': [ '5.1.0' ],
+18 silly audit   reusify: [ '1.1.0' ],
+18 silly audit   rolldown: [ '1.0.1' ],
+18 silly audit   router: [ '2.2.0' ],
+18 silly audit   'run-applescript': [ '7.1.0' ],
+18 silly audit   'run-parallel': [ '1.2.0' ],
+18 silly audit   'safer-buffer': [ '2.1.2' ],
+18 silly audit   satori: [ '0.16.0' ],
+18 silly audit   scheduler: [ '0.27.0' ],
+18 silly audit   'schema-utils': [ '4.3.3' ],
+18 silly audit   send: [ '1.2.1' ],
+18 silly audit   'serve-static': [ '2.2.1' ],
+18 silly audit   setprototypeof: [ '1.2.0' ],
+18 silly audit   shadcn: [ '4.18.0' ],
+18 silly audit   undici: [ '7.29.0', '7.24.8' ],
+18 silly audit   sharp: [ '0.34.5' ],
+18 silly audit   'shebang-command': [ '2.0.0' ],
+18 silly audit   'shebang-regex': [ '3.0.0' ],
+18 silly audit   'side-channel': [ '1.1.1' ],
+18 silly audit   'side-channel-list': [ '1.0.1' ],
+18 silly audit   'side-channel-map': [ '1.0.1' ],
+18 silly audit   'side-channel-weakmap': [ '1.0.2' ],
+18 silly audit   sisteransi: [ '1.0.5' ],
+18 silly audit   'smart-buffer': [ '4.2.0' ],
+18 silly audit   socks: [ '2.8.9' ],
+18 silly audit   'source-map': [ '0.6.1' ],
+18 silly audit   'source-map-js': [ '1.2.1' ],
+18 silly audit   'source-map-support': [ '0.5.21' ],
+18 silly audit   srvx: [ '0.11.22' ],
+18 silly audit   statuses: [ '2.0.2' ],
+18 silly audit   'stdin-discarder': [ '0.2.2' ],
+18 silly audit   'string-width': [ '7.2.0' ],
+18 silly audit   'string.prototype.codepointat': [ '0.2.1' ],
+18 silly audit   'stringify-object': [ '5.0.0' ],
+18 silly audit   'strip-bom': [ '3.0.0' ],
+18 silly audit   'strip-literal': [ '3.1.0' ],
+18 silly audit   systeminformation: [ '5.33.6' ],
+18 silly audit   'tailwind-merge': [ '3.6.0' ],
+18 silly audit   tailwindcss: [ '4.2.1' ],
+18 silly audit   tapable: [ '2.3.3' ],
+18 silly audit   terser: [ '5.51.2' ],
+18 silly audit   three: [ '0.185.1' ],
+18 silly audit   'tiny-inflate': [ '1.0.3' ],
+18 silly audit   'tiny-invariant': [ '1.3.3' ],
+18 silly audit   tinyglobby: [ '0.2.17' ],
+18 silly audit   tinypool: [ '2.1.0' ],
+18 silly audit   'to-regex-range': [ '5.0.1' ],
+18 silly audit   toidentifier: [ '1.0.1' ],
+18 silly audit   'ts-morph': [ '26.0.0' ],
+18 silly audit   'tsconfig-paths': [ '4.2.0' ],
+18 silly audit   tslib: [ '2.8.1' ],
+18 silly audit   'turbo-stream': [ '3.2.1' ],
+18 silly audit   'type-is': [ '2.1.0' ],
+18 silly audit   typescript: [ '5.9.3' ],
+18 silly audit   'undici-types': [ '6.21.0' ],
+18 silly audit   unenv: [ '2.0.0-rc.24' ],
+18 silly audit   'unicode-trie': [ '2.0.0' ],
+18 silly audit   'unicorn-magic': [ '0.3.0' ],
+18 silly audit   universalify: [ '2.0.1' ],
+18 silly audit   unpic: [ '4.2.2' ],
+18 silly audit   unpipe: [ '1.0.0' ],
+18 silly audit   'update-browserslist-db': [ '1.3.2' ],
+18 silly audit   'use-sync-external-store': [ '1.6.0' ],
+18 silly audit   'util-deprecate': [ '1.0.2' ],
+18 silly audit   'validate-npm-package-name': [ '7.0.2' ],
+18 silly audit   vary: [ '1.1.2' ],
+18 silly audit   vinext: [ '1.0.0-beta.5' ],
+18 silly audit   vite: [ '8.0.13' ],
+18 silly audit   'vite-plugin-commonjs': [ '0.10.4' ],
+18 silly audit   'vite-plugin-dynamic-import': [ '1.6.0' ],
+18 silly audit   vitefu: [ '1.1.3' ],
+18 silly audit   watchpack: [ '2.5.2' ],
+18 silly audit   'web-vitals': [ '4.2.4' ],
+18 silly audit   webpack: [ '5.110.2' ],
+18 silly audit   'webpack-sources': [ '3.5.1' ],
+18 silly audit   workerd: [ '1.20260515.1' ],
+18 silly audit   wrangler: [ '4.92.0' ],
+18 silly audit   wrappy: [ '1.0.2' ],
+18 silly audit   ws: [ '8.18.0' ],
+18 silly audit   'wsl-utils': [ '1.0.0' ],
+18 silly audit   yallist: [ '3.1.1' ],
+18 silly audit   'yocto-spinner': [ '1.2.2' ],
+18 silly audit   yoctocolors: [ '2.2.0' ],
+18 silly audit   'yoga-layout': [ '3.2.1' ],
+18 silly audit   youch: [ '4.1.0-beta.10' ],
+18 silly audit   'youch-core': [ '0.3.3' ],
+18 silly audit   zod: [ '3.25.76' ],
+18 silly audit   'zod-to-json-schema': [ '3.25.2' ]
+18 silly audit }
+19 http fetch GET 200 https://registry.npmjs.org/npm 1112ms
+20 http fetch GET 200 https://cdn.npmmirror.com/packages/yallist/3.1.1/yallist-3.1.1.tgz 2607ms (cache miss)
+21 http fetch GET 200 https://cdn.npmmirror.com/packages/yocto-spinner/1.2.2/yocto-spinner-1.2.2.tgz 2614ms (cache miss)
+22 http fetch GET 200 https://cdn.npmmirror.com/packages/which/4.0.0/which-4.0.0.tgz 2626ms (cache miss)
+23 http fetch GET 200 https://cdn.npmmirror.com/packages/wsl-utils/1.0.0/wsl-utils-1.0.0.tgz 2649ms (cache miss)
+24 http fetch GET 200 https://cdn.npmmirror.com/packages/yoctocolors/2.2.0/yoctocolors-2.2.0.tgz 2698ms (cache miss)
+25 http fetch GET 200 https://cdn.npmmirror.com/packages/youch/4.1.0-beta.10/youch-4.1.0-beta.10.tgz 2853ms (cache miss)
+26 http fetch GET 200 https://cdn.npmmirror.com/packages/vitefu/1.1.3/vitefu-1.1.3.tgz 2929ms (cache miss)
+27 http fetch GET 200 https://cdn.npmmirror.com/packages/wrappy/1.0.2/wrappy-1.0.2.tgz 2944ms (cache miss)
+28 http fetch GET 200 https://cdn.npmmirror.com/packages/zod-to-json-schema/3.25.2/zod-to-json-schema-3.25.2.tgz 2987ms (cache miss)
+29 http fetch GET 200 https://cdn.npmmirror.com/packages/vite-plugin-commonjs/0.10.4/vite-plugin-commonjs-0.10.4.tgz 2990ms (cache miss)
+30 http fetch GET 200 https://cdn.npmmirror.com/packages/validate-npm-package-name/7.0.2/validate-npm-package-name-7.0.2.tgz 3000ms (cache miss)
+31 http fetch GET 200 https://cdn.npmmirror.com/packages/webpack-sources/3.5.1/webpack-sources-3.5.1.tgz 3046ms (cache miss)
+32 http fetch GET 200 https://cdn.npmmirror.com/packages/yoga-layout/3.2.1/yoga-layout-3.2.1.tgz 3086ms (cache miss)
+33 http fetch GET 200 https://cdn.npmmirror.com/packages/ws/8.18.0/ws-8.18.0.tgz 3097ms (cache miss)
+34 http fetch GET 200 https://cdn.npmmirror.com/packages/watchpack/2.5.2/watchpack-2.5.2.tgz 3099ms (cache miss)
+35 http fetch GET 200 https://cdn.npmmirror.com/packages/vite-plugin-dynamic-import/1.6.0/vite-plugin-dynamic-import-1.6.0.tgz 3165ms (cache miss)
+36 http fetch GET 200 https://cdn.npmmirror.com/packages/unpipe/1.0.0/unpipe-1.0.0.tgz 3220ms (cache miss)
+37 http fetch GET 200 https://cdn.npmmirror.com/packages/util-deprecate/1.0.2/util-deprecate-1.0.2.tgz 3225ms (cache miss)
+38 http fetch GET 200 https://cdn.npmmirror.com/packages/vary/1.1.2/vary-1.1.2.tgz 3248ms (cache miss)
+39 http fetch GET 200 https://cdn.npmmirror.com/packages/use-sync-external-store/1.6.0/use-sync-external-store-1.6.0.tgz 3308ms (cache miss)
+40 http fetch GET 200 https://cdn.npmmirror.com/packages/update-browserslist-db/1.3.2/update-browserslist-db-1.3.2.tgz 3321ms (cache miss)
+41 http fetch GET 200 https://cdn.npmmirror.com/packages/youch-core/0.3.3/youch-core-0.3.3.tgz 3387ms (cache miss)
+42 http fetch GET 200 https://cdn.npmmirror.com/packages/unicorn-magic/0.3.0/unicorn-magic-0.3.0.tgz 3405ms (cache miss)
+43 http fetch GET 200 https://cdn.npmmirror.com/packages/unicode-trie/2.0.0/unicode-trie-2.0.0.tgz 3485ms (cache miss)
+44 http fetch GET 200 https://cdn.npmmirror.com/packages/universalify/2.0.1/universalify-2.0.1.tgz 3505ms (cache miss)
+45 http fetch GET 200 https://cdn.npmmirror.com/packages/type-is/2.1.0/type-is-2.1.0.tgz 3615ms (cache miss)
+46 http fetch GET 200 https://cdn.npmmirror.com/packages/turbo-stream/3.2.1/turbo-stream-3.2.1.tgz 3702ms (cache miss)
+47 http fetch GET 200 https://cdn.npmmirror.com/packages/undici-types/6.21.0/undici-types-6.21.0.tgz 3790ms (cache miss)
+48 http fetch GET 200 https://cdn.npmmirror.com/packages/tslib/2.8.1/tslib-2.8.1.tgz 3824ms (cache miss)
+49 http fetch GET 200 https://cdn.npmmirror.com/packages/to-regex-range/5.0.1/to-regex-range-5.0.1.tgz 3893ms (cache miss)
+50 http fetch GET 200 https://cdn.npmmirror.com/packages/workerd/1.20260515.1/workerd-1.20260515.1.tgz 3923ms (cache miss)
+51 http fetch GET 200 https://cdn.npmmirror.com/packages/tsconfig-paths/4.2.0/tsconfig-paths-4.2.0.tgz 3946ms (cache miss)
+52 http fetch GET 200 https://cdn.npmmirror.com/packages/tinypool/2.1.0/tinypool-2.1.0.tgz 3966ms (cache miss)
+53 http fetch GET 200 https://cdn.npmmirror.com/packages/zod/3.25.76/zod-3.25.76.tgz 3998ms (cache miss)
+54 http fetch GET 200 https://cdn.npmmirror.com/packages/vite/8.0.13/vite-8.0.13.tgz 3998ms (cache miss)
+55 http fetch GET 200 https://cdn.npmmirror.com/packages/tinyglobby/0.2.17/tinyglobby-0.2.17.tgz 4000ms (cache miss)
+56 http fetch GET 200 https://cdn.npmmirror.com/packages/unpic/4.2.2/unpic-4.2.2.tgz 4045ms (cache miss)
+57 http fetch GET 200 https://cdn.npmmirror.com/packages/toidentifier/1.0.1/toidentifier-1.0.1.tgz 4049ms (cache miss)
+58 http fetch GET 200 https://cdn.npmmirror.com/packages/ts-morph/26.0.0/ts-morph-26.0.0.tgz 4076ms (cache miss)
+59 http fetch GET 200 https://cdn.npmmirror.com/packages/tiny-inflate/1.0.3/tiny-inflate-1.0.3.tgz 4148ms (cache miss)
+60 http fetch GET 200 https://cdn.npmmirror.com/packages/supports-color/8.1.1/supports-color-8.1.1.tgz 4281ms (cache miss)
+61 http fetch GET 200 https://cdn.npmmirror.com/packages/tailwind-merge/3.6.0/tailwind-merge-3.6.0.tgz 4319ms (cache miss)
+62 http fetch GET 200 https://cdn.npmmirror.com/packages/tiny-invariant/1.3.3/tiny-invariant-1.3.3.tgz 4322ms (cache miss)
+63 http fetch GET 200 https://cdn.npmmirror.com/packages/tapable/2.3.3/tapable-2.3.3.tgz 4342ms (cache miss)
+64 http fetch GET 200 https://cdn.npmmirror.com/packages/strip-bom/3.0.0/strip-bom-3.0.0.tgz 4342ms (cache miss)
+65 http fetch GET 200 https://cdn.npmmirror.com/packages/terser/5.51.2/terser-5.51.2.tgz 4364ms (cache miss)
+66 http fetch GET 200 https://cdn.npmmirror.com/packages/strip-final-newline/4.0.0/strip-final-newline-4.0.0.tgz 4408ms (cache miss)
+67 http fetch GET 200 https://cdn.npmmirror.com/packages/systeminformation/5.33.6/systeminformation-5.33.6.tgz 4410ms (cache miss)
+68 http fetch GET 200 https://cdn.npmmirror.com/packages/wrangler/4.92.0/wrangler-4.92.0.tgz 4415ms (cache miss)
+69 http fetch GET 200 https://cdn.npmmirror.com/packages/stringify-object/5.0.0/stringify-object-5.0.0.tgz 4445ms (cache miss)
+70 http fetch GET 200 https://cdn.npmmirror.com/packages/unenv/2.0.0-rc.24/unenv-2.0.0-rc.24.tgz 4477ms (cache miss)
+71 http fetch GET 200 https://cdn.npmmirror.com/packages/strip-literal/3.1.0/strip-literal-3.1.0.tgz 4484ms (cache miss)
+72 http fetch GET 200 https://cdn.npmmirror.com/packages/string.prototype.codepointat/0.2.1/string.prototype.codepointat-0.2.1.tgz 4519ms (cache miss)
+73 http fetch GET 200 https://cdn.npmmirror.com/packages/undici/7.24.8/undici-7.24.8.tgz 4522ms (cache miss)
+74 http fetch GET 200 https://cdn.npmmirror.com/packages/tailwindcss/4.2.1/tailwindcss-4.2.1.tgz 4539ms (cache miss)
+75 http fetch GET 200 https://cdn.npmmirror.com/packages/string-width/7.2.0/string-width-7.2.0.tgz 4561ms (cache miss)
+76 http fetch GET 200 https://cdn.npmmirror.com/packages/strip-ansi/6.0.1/strip-ansi-6.0.1.tgz 4639ms (cache miss)
+77 http fetch GET 200 https://cdn.npmmirror.com/packages/stdin-discarder/0.2.2/stdin-discarder-0.2.2.tgz 4640ms (cache miss)
+78 http fetch GET 200 https://cdn.npmmirror.com/packages/source-map-support/0.5.21/source-map-support-0.5.21.tgz 4643ms (cache miss)
+79 http fetch GET 200 https://cdn.npmmirror.com/packages/sisteransi/1.0.5/sisteransi-1.0.5.tgz 4724ms (cache miss)
+80 http fetch GET 200 https://cdn.npmmirror.com/packages/statuses/2.0.2/statuses-2.0.2.tgz 4725ms (cache miss)
+81 http fetch GET 200 https://cdn.npmmirror.com/packages/srvx/0.11.22/srvx-0.11.22.tgz 4734ms (cache miss)
+82 http fetch GET 200 https://cdn.npmmirror.com/packages/socks/2.8.9/socks-2.8.9.tgz 4736ms (cache miss)
+83 http fetch GET 200 https://cdn.npmmirror.com/packages/signal-exit/4.1.0/signal-exit-4.1.0.tgz 4788ms (cache miss)
+84 http fetch GET 200 https://cdn.npmmirror.com/packages/source-map-js/1.2.1/source-map-js-1.2.1.tgz 4822ms (cache miss)
+85 http fetch GET 200 https://cdn.npmmirror.com/packages/smart-buffer/4.2.0/smart-buffer-4.2.0.tgz 4830ms (cache miss)
+86 http fetch GET 200 https://cdn.npmmirror.com/packages/side-channel-weakmap/1.0.2/side-channel-weakmap-1.0.2.tgz 4834ms (cache miss)
+87 http fetch GET 200 https://cdn.npmmirror.com/packages/source-map/0.6.1/source-map-0.6.1.tgz 4847ms (cache miss)
+88 http fetch GET 200 https://cdn.npmmirror.com/packages/side-channel-map/1.0.1/side-channel-map-1.0.1.tgz 4857ms (cache miss)
+89 http fetch GET 200 https://cdn.npmmirror.com/packages/shebang-regex/3.0.0/shebang-regex-3.0.0.tgz 4917ms (cache miss)
+90 http fetch GET 200 https://cdn.npmmirror.com/packages/side-channel-list/1.0.1/side-channel-list-1.0.1.tgz 4938ms (cache miss)
+91 http fetch GET 200 https://cdn.npmmirror.com/packages/shebang-command/2.0.0/shebang-command-2.0.0.tgz 4939ms (cache miss)
+92 http fetch GET 200 https://cdn.npmmirror.com/packages/side-channel/1.1.1/side-channel-1.1.1.tgz 4950ms (cache miss)
+93 http fetch GET 200 https://cdn.npmmirror.com/packages/web-vitals/4.2.4/web-vitals-4.2.4.tgz 4993ms (cache miss)
+94 http fetch GET 200 https://cdn.npmmirror.com/packages/serve-static/2.2.1/serve-static-2.2.1.tgz 5014ms (cache miss)
+95 http fetch GET 200 https://cdn.npmmirror.com/packages/vinext/1.0.0-beta.5/vinext-1.0.0-beta.5.tgz 5027ms (cache miss)
+96 http fetch GET 200 https://cdn.npmmirror.com/packages/sharp/0.34.5/sharp-0.34.5.tgz 5022ms (cache miss)
+97 http fetch GET 200 https://cdn.npmmirror.com/packages/shadcn/4.18.0/shadcn-4.18.0.tgz 5099ms (cache miss)
+98 http fetch GET 200 https://cdn.npmmirror.com/packages/send/1.2.1/send-1.2.1.tgz 5146ms (cache miss)
+99 http fetch GET 200 https://cdn.npmmirror.com/packages/setprototypeof/1.2.0/setprototypeof-1.2.0.tgz 5148ms (cache miss)
+100 http fetch GET 200 https://cdn.npmmirror.com/packages/semver/6.3.1/semver-6.3.1.tgz 5150ms (cache miss)
+101 http fetch GET 200 https://cdn.npmmirror.com/packages/safer-buffer/2.1.2/safer-buffer-2.1.2.tgz 5156ms (cache miss)
+102 http fetch GET 200 https://cdn.npmmirror.com/packages/scheduler/0.27.0/scheduler-0.27.0.tgz 5159ms (cache miss)
+103 http fetch GET 200 https://cdn.npmmirror.com/packages/schema-utils/4.3.3/schema-utils-4.3.3.tgz 5165ms (cache miss)
+104 http fetch GET 200 https://cdn.npmmirror.com/packages/run-parallel/1.2.0/run-parallel-1.2.0.tgz 5197ms (cache miss)
+105 http fetch GET 200 https://cdn.npmmirror.com/packages/run-applescript/7.1.0/run-applescript-7.1.0.tgz 5344ms (cache miss)
+106 http fetch GET 200 https://cdn.npmmirror.com/packages/router/2.2.0/router-2.2.0.tgz 5398ms (cache miss)
+107 http fetch GET 200 https://cdn.npmmirror.com/packages/resolve-from/4.0.0/resolve-from-4.0.0.tgz 5573ms (cache miss)
+108 http fetch GET 200 https://cdn.npmmirror.com/packages/reusify/1.1.0/reusify-1.1.0.tgz 5582ms (cache miss)
+109 http fetch GET 200 https://cdn.npmmirror.com/packages/require-from-string/2.0.2/require-from-string-2.0.2.tgz 5586ms (cache miss)
+110 http fetch GET 200 https://cdn.npmmirror.com/packages/reselect/5.3.0/reselect-5.3.0.tgz 5631ms (cache miss)
+111 http fetch GET 200 https://cdn.npmmirror.com/packages/restore-cursor/5.1.0/restore-cursor-5.1.0.tgz 5642ms (cache miss)
+112 http fetch GET 200 https://cdn.npmmirror.com/packages/satori/0.16.0/satori-0.16.0.tgz 5655ms (cache miss)
+113 http fetch GET 200 https://cdn.npmmirror.com/packages/rolldown/1.0.1/rolldown-1.0.1.tgz 5684ms (cache miss)
+114 http fetch GET 200 https://cdn.npmmirror.com/packages/range-parser/1.3.0/range-parser-1.3.0.tgz 5706ms (cache miss)
+115 http fetch GET 200 https://cdn.npmmirror.com/packages/recast/0.23.21/recast-0.23.21.tgz 5735ms (cache miss)
+116 http fetch GET 200 https://cdn.npmmirror.com/packages/raw-body/3.0.2/raw-body-3.0.2.tgz 5795ms (cache miss)
+117 http fetch GET 200 https://cdn.npmmirror.com/packages/react/19.2.6/react-19.2.6.tgz 5807ms (cache miss)
+118 http fetch GET 200 https://cdn.npmmirror.com/packages/queue-microtask/1.2.3/queue-microtask-1.2.3.tgz 5888ms (cache miss)
+119 http fetch GET 200 https://cdn.npmmirror.com/packages/qs/6.16.0/qs-6.16.0.tgz 6001ms (cache miss)
+120 http fetch GET 200 https://cdn.npmmirror.com/packages/proxy-addr/2.0.7/proxy-addr-2.0.7.tgz 6088ms (cache miss)
+121 http fetch GET 200 https://cdn.npmmirror.com/packages/react-server-dom-webpack/19.2.6/react-server-dom-webpack-19.2.6.tgz 6183ms (cache miss)
+122 http fetch GET 200 https://cdn.npmmirror.com/packages/powershell-utils/0.2.1/powershell-utils-0.2.1.tgz 6189ms (cache miss)
+123 http fetch GET 200 https://cdn.npmmirror.com/packages/react-dom/19.2.6/react-dom-19.2.6.tgz 6190ms (cache miss)
+124 http fetch GET 200 https://cdn.npmmirror.com/packages/postcss-value-parser/4.2.0/postcss-value-parser-4.2.0.tgz 6220ms (cache miss)
+125 http fetch GET 200 https://cdn.npmmirror.com/packages/pretty-ms/9.3.1/pretty-ms-9.3.1.tgz 6224ms (cache miss)
+126 http fetch GET 200 https://cdn.npmmirror.com/packages/pkg-up/3.1.0/pkg-up-3.1.0.tgz 6246ms (cache miss)
+127 http fetch GET 200 https://cdn.npmmirror.com/packages/prompts/2.4.2/prompts-2.4.2.tgz 6270ms (cache miss)
+128 http fetch GET 200 https://cdn.npmmirror.com/packages/pkce-challenge/5.0.1/pkce-challenge-5.0.1.tgz 6314ms (cache miss)
+129 http fetch GET 200 https://cdn.npmmirror.com/packages/picomatch/4.0.7/picomatch-4.0.7.tgz 6345ms (cache miss)
+130 http fetch GET 200 https://cdn.npmmirror.com/packages/postcss/8.5.26/postcss-8.5.26.tgz 6364ms (cache miss)
+131 http fetch GET 200 https://cdn.npmmirror.com/packages/pathe/2.0.3/pathe-2.0.3.tgz 6412ms (cache miss)
+132 http fetch GET 200 https://cdn.npmmirror.com/packages/typescript/5.9.3/typescript-5.9.3.tgz 6452ms (cache miss)
+133 http fetch GET 200 https://cdn.npmmirror.com/packages/picocolors/1.1.1/picocolors-1.1.1.tgz 6459ms (cache miss)
+134 http fetch GET 200 https://cdn.npmmirror.com/packages/path-to-regexp/8.4.2/path-to-regexp-8.4.2.tgz 6489ms (cache miss)
+135 http fetch GET 200 https://cdn.npmmirror.com/packages/path-key/3.1.1/path-key-3.1.1.tgz 6496ms (cache miss)
+136 http fetch GET 200 https://cdn.npmmirror.com/packages/path-browserify/1.0.1/path-browserify-1.0.1.tgz 6677ms (cache miss)
+137 http fetch GET 200 https://cdn.npmmirror.com/packages/path-exists/3.0.0/path-exists-3.0.0.tgz 6831ms (cache miss)
+138 http fetch GET 200 https://cdn.npmmirror.com/packages/parseurl/1.3.3/parseurl-1.3.3.tgz 6832ms (cache miss)
+139 http fetch GET 200 https://cdn.npmmirror.com/packages/parse-json/5.2.0/parse-json-5.2.0.tgz 6856ms (cache miss)
+140 http fetch GET 200 https://cdn.npmmirror.com/packages/parse-css-color/0.2.1/parse-css-color-0.2.1.tgz 6906ms (cache miss)
+141 http fetch GET 200 https://cdn.npmmirror.com/packages/parent-module/1.0.1/parent-module-1.0.1.tgz 6919ms (cache miss)
+142 http fetch GET 200 https://cdn.npmmirror.com/packages/p-try/2.2.0/p-try-2.2.0.tgz 6990ms (cache miss)
+143 http fetch GET 200 https://cdn.npmmirror.com/packages/p-locate/3.0.0/p-locate-3.0.0.tgz 7066ms (cache miss)
+144 http fetch GET 200 https://cdn.npmmirror.com/packages/p-limit/2.3.0/p-limit-2.3.0.tgz 7114ms (cache miss)
+145 http fetch GET 200 https://cdn.npmmirror.com/packages/ora/8.2.0/ora-8.2.0.tgz 7116ms (cache miss)
+146 http fetch GET 200 https://cdn.npmmirror.com/packages/oxlint-tsgolint/7.0.2001/oxlint-tsgolint-7.0.2001.tgz 7134ms (cache miss)
+147 http fetch GET 200 https://cdn.npmmirror.com/packages/pako/0.2.9/pako-0.2.9.tgz 7169ms (cache miss)
+148 http fetch GET 200 https://cdn.npmmirror.com/packages/oxlint/1.76.0/oxlint-1.76.0.tgz 7174ms (cache miss)
+149 http fetch GET 200 https://cdn.npmmirror.com/packages/postcss-selector-parser/7.1.5/postcss-selector-parser-7.1.5.tgz 7343ms (cache miss)
+150 http fetch GET 200 https://cdn.npmmirror.com/packages/onetime/5.1.2/onetime-5.1.2.tgz 7394ms (cache miss)
+151 http fetch GET 200 https://cdn.npmmirror.com/packages/open/11.0.2/open-11.0.2.tgz 7428ms (cache miss)
+152 http fetch GET 200 https://cdn.npmmirror.com/packages/on-finished/2.4.1/on-finished-2.4.1.tgz 7537ms (cache miss)
+153 http fetch GET 200 https://cdn.npmmirror.com/packages/object-inspect/1.13.4/object-inspect-1.13.4.tgz 7571ms (cache miss)
+154 http fetch GET 200 https://cdn.npmmirror.com/packages/once/1.4.0/once-1.4.0.tgz 7597ms (cache miss)
+155 http fetch GET 200 https://cdn.npmmirror.com/packages/object-treeify/1.1.33/object-treeify-1.1.33.tgz 7605ms (cache miss)
+156 http fetch GET 200 https://cdn.npmmirror.com/packages/object-assign/4.1.1/object-assign-4.1.1.tgz 7629ms (cache miss)
+157 http fetch GET 200 https://cdn.npmmirror.com/packages/node-releases/2.0.54/node-releases-2.0.54.tgz 7681ms (cache miss)
+158 http fetch GET 200 https://cdn.npmmirror.com/packages/minimizer-webpack-plugin/5.8.0/minimizer-webpack-plugin-5.8.0.tgz 7746ms (cache miss)
+159 http fetch GET 200 https://cdn.npmmirror.com/packages/negotiator/1.1.0/negotiator-1.1.0.tgz 7767ms (cache miss)
+160 http fetch GET 200 https://cdn.npmmirror.com/packages/parse-ms/4.0.0/parse-ms-4.0.0.tgz 7812ms (cache miss)
+161 http fetch GET 200 https://cdn.npmmirror.com/packages/ms/2.1.3/ms-2.1.3.tgz 7931ms (cache miss)
+162 http fetch GET 200 https://cdn.npmmirror.com/packages/neo-async/2.6.2/neo-async-2.6.2.tgz 7963ms (cache miss)
+163 http fetch GET 200 https://cdn.npmmirror.com/packages/nanoid/3.3.18/nanoid-3.3.18.tgz 8018ms (cache miss)
+164 http fetch GET 200 https://cdn.npmmirror.com/packages/minimist/1.2.8/minimist-1.2.8.tgz 8036ms (cache miss)
+165 http fetch GET 200 https://cdn.npmmirror.com/packages/oxfmt/0.61.0/oxfmt-0.61.0.tgz 8218ms (cache miss)
+166 http fetch GET 200 https://cdn.npmmirror.com/packages/mimic-function/5.0.1/mimic-function-5.0.1.tgz 8235ms (cache miss)
+167 http fetch GET 200 https://cdn.npmmirror.com/packages/mimic-fn/3.1.0/mimic-fn-3.1.0.tgz 8236ms (cache miss)
+168 http fetch GET 200 https://cdn.npmmirror.com/packages/micromatch/4.0.8/micromatch-4.0.8.tgz 8305ms (cache miss)
+169 http fetch GET 200 https://cdn.npmmirror.com/packages/mime-types/3.0.2/mime-types-3.0.2.tgz 8332ms (cache miss)
+170 http fetch GET 200 https://cdn.npmmirror.com/packages/merge2/1.4.1/merge2-1.4.1.tgz 8405ms (cache miss)
+171 http fetch GET 200 https://cdn.npmmirror.com/packages/mime-db/1.54.0/mime-db-1.54.0.tgz 8409ms (cache miss)
+172 http fetch GET 200 https://cdn.npmmirror.com/packages/merge-stream/2.0.0/merge-stream-2.0.0.tgz 8423ms (cache miss)
+173 http fetch GET 200 https://cdn.npmmirror.com/packages/merge-descriptors/2.0.0/merge-descriptors-2.0.0.tgz 8488ms (cache miss)
+174 http fetch GET 200 https://cdn.npmmirror.com/packages/npm-run-path/6.0.0/npm-run-path-6.0.0.tgz 8566ms (cache miss)
+175 http fetch GET 200 https://cdn.npmmirror.com/packages/media-typer/1.1.1/media-typer-1.1.1.tgz 8569ms (cache miss)
+176 http fetch GET 200 https://cdn.npmmirror.com/packages/math-intrinsics/1.1.0/math-intrinsics-1.1.0.tgz 8711ms (cache miss)
+177 http fetch GET 200 https://cdn.npmmirror.com/packages/magic-string/0.30.21/magic-string-0.30.21.tgz 8716ms (cache miss)
+178 http fetch GET 200 https://cdn.npmmirror.com/packages/log-symbols/6.0.0/log-symbols-6.0.0.tgz 8882ms (cache miss)
+179 http fetch GET 200 https://cdn.npmmirror.com/packages/locate-path/3.0.0/locate-path-3.0.0.tgz 8897ms (cache miss)
+180 http fetch GET 200 https://cdn.npmmirror.com/packages/lines-and-columns/1.2.4/lines-and-columns-1.2.4.tgz 8986ms (cache miss)
+181 http fetch GET 200 https://cdn.npmmirror.com/packages/linebreak/1.1.0/linebreak-1.1.0.tgz 9019ms (cache miss)
+182 http fetch GET 200 https://cdn.npmmirror.com/packages/lru-cache/5.1.1/lru-cache-5.1.1.tgz 9087ms (cache miss)
+183 http fetch GET 200 https://cdn.npmmirror.com/packages/lightningcss/1.31.1/lightningcss-1.31.1.tgz 9105ms (cache miss)
+184 http fetch GET 200 https://cdn.npmmirror.com/packages/minimatch/10.2.6/minimatch-10.2.6.tgz 9122ms (cache miss)
+185 http fetch GET 200 https://cdn.npmmirror.com/packages/kleur/4.1.5/kleur-4.1.5.tgz 9163ms (cache miss)
+186 http fetch GET 200 https://cdn.npmmirror.com/packages/jsonfile/6.2.1/jsonfile-6.2.1.tgz 9195ms (cache miss)
+187 http fetch GET 200 https://cdn.npmmirror.com/packages/json5/2.2.3/json5-2.2.3.tgz 9202ms (cache miss)
+188 http fetch GET 200 https://cdn.npmmirror.com/packages/json-schema-typed/8.0.2/json-schema-typed-8.0.2.tgz 9341ms (cache miss)
+189 http fetch GET 200 https://cdn.npmmirror.com/packages/json-schema-traverse/1.0.0/json-schema-traverse-1.0.0.tgz 9345ms (cache miss)
+190 http fetch GET 200 https://cdn.npmmirror.com/packages/jsesc/3.1.0/jsesc-3.1.0.tgz 9432ms (cache miss)
+191 http fetch GET 200 https://cdn.npmmirror.com/packages/meshoptimizer/1.1.1/meshoptimizer-1.1.1.tgz 9439ms (cache miss)
+192 http fetch GET 200 https://cdn.npmmirror.com/packages/js-tokens/4.0.0/js-tokens-4.0.0.tgz 9492ms (cache miss)
+193 http fetch GET 200 https://cdn.npmmirror.com/packages/js-yaml/4.3.2/js-yaml-4.3.2.tgz 9522ms (cache miss)
+194 http fetch GET 200 https://cdn.npmmirror.com/packages/is-wsl/3.1.1/is-wsl-3.1.1.tgz 9650ms (cache miss)
+195 http fetch GET 200 https://cdn.npmmirror.com/packages/jest-worker/27.5.1/jest-worker-27.5.1.tgz 9663ms (cache miss)
+196 http fetch GET 200 https://cdn.npmmirror.com/packages/is-unicode-supported/2.1.0/is-unicode-supported-2.1.0.tgz 9673ms (cache miss)
+197 http fetch GET 200 https://cdn.npmmirror.com/packages/isexe/3.1.5/isexe-3.1.5.tgz 9688ms (cache miss)
+198 http fetch GET 200 https://cdn.npmmirror.com/packages/is-stream/4.0.1/is-stream-4.0.1.tgz 9771ms (cache miss)
+199 http fetch GET 200 https://cdn.npmmirror.com/packages/jose/6.2.10/jose-6.2.10.tgz 9772ms (cache miss)
+200 http fetch GET 200 https://cdn.npmmirror.com/packages/json-parse-even-better-errors/2.3.1/json-parse-even-better-errors-2.3.1.tgz 9804ms (cache miss)
+201 http fetch GET 200 https://cdn.npmmirror.com/packages/is-regexp/3.1.0/is-regexp-3.1.0.tgz 9836ms (cache miss)
+202 http fetch GET 200 https://cdn.npmmirror.com/packages/jiti/2.7.0/jiti-2.7.0.tgz 9889ms (cache miss)
+203 http fetch GET 200 https://cdn.npmmirror.com/packages/is-plain-obj/4.1.0/is-plain-obj-4.1.0.tgz 9905ms (cache miss)
+204 http fetch GET 200 https://cdn.npmmirror.com/packages/is-promise/4.0.0/is-promise-4.0.0.tgz 9931ms (cache miss)
+205 http fetch GET 200 https://cdn.npmmirror.com/packages/is-interactive/2.0.0/is-interactive-2.0.0.tgz 10012ms (cache miss)
+206 http fetch GET 200 https://cdn.npmmirror.com/packages/is-number/7.0.0/is-number-7.0.0.tgz 10013ms (cache miss)
+207 http fetch GET 200 https://cdn.npmmirror.com/packages/is-inside-container/1.0.0/is-inside-container-1.0.0.tgz 10078ms (cache miss)
+208 http fetch GET 200 https://cdn.npmmirror.com/packages/is-glob/4.0.3/is-glob-4.0.3.tgz 10167ms (cache miss)
+209 http fetch GET 200 https://cdn.npmmirror.com/packages/miniflare/4.20260515.0/miniflare-4.20260515.0.tgz 10227ms (cache miss)
+210 http fetch GET 200 https://cdn.npmmirror.com/packages/is-extglob/2.1.1/is-extglob-2.1.1.tgz 10332ms (cache miss)
+211 http fetch GET 200 https://cdn.npmmirror.com/packages/is-arrayish/0.2.1/is-arrayish-0.2.1.tgz 10332ms (cache miss)
+212 http fetch GET 200 https://cdn.npmmirror.com/packages/is-in-ssh/1.0.0/is-in-ssh-1.0.0.tgz 10334ms (cache miss)
+213 http fetch GET 200 https://cdn.npmmirror.com/packages/is-docker/3.0.0/is-docker-3.0.0.tgz 10333ms (cache miss)
+214 http fetch GET 200 https://cdn.npmmirror.com/packages/is-obj/2.0.0/is-obj-2.0.0.tgz 10356ms (cache miss)
+215 http fetch GET 200 https://cdn.npmmirror.com/packages/ip-address/10.7.0/ip-address-10.7.0.tgz 10367ms (cache miss)
+216 http fetch GET 200 https://cdn.npmmirror.com/packages/inherits/2.0.4/inherits-2.0.4.tgz 10411ms (cache miss)
+217 http fetch GET 200 https://cdn.npmmirror.com/packages/import-fresh/3.3.1/import-fresh-3.3.1.tgz 10454ms (cache miss)
+218 http fetch GET 200 https://cdn.npmmirror.com/packages/ignore/5.3.2/ignore-5.3.2.tgz 10455ms (cache miss)
+219 http fetch GET 200 https://cdn.npmmirror.com/packages/human-signals/8.0.1/human-signals-8.0.1.tgz 10656ms (cache miss)
+220 http fetch GET 200 https://cdn.npmmirror.com/packages/iconv-lite/0.7.3/iconv-lite-0.7.3.tgz 10660ms (cache miss)
+221 http fetch GET 200 https://cdn.npmmirror.com/packages/image-size/2.0.2/image-size-2.0.2.tgz 10778ms (cache miss)
+222 http fetch GET 200 https://cdn.npmmirror.com/packages/lightningcss-win32-x64-msvc/1.31.1/lightningcss-win32-x64-msvc-1.31.1.tgz 10804ms (cache miss)
+223 http fetch GET 200 https://cdn.npmmirror.com/packages/hex-rgb/4.3.0/hex-rgb-4.3.0.tgz 10814ms (cache miss)
+224 http fetch GET 200 https://cdn.npmmirror.com/packages/ipaddr.js/1.9.1/ipaddr.js-1.9.1.tgz 10868ms (cache miss)
+225 http fetch GET 200 https://cdn.npmmirror.com/packages/http-errors/2.0.1/http-errors-2.0.1.tgz 10880ms (cache miss)
+226 http fetch GET 200 https://cdn.npmmirror.com/packages/hasown/2.0.4/hasown-2.0.4.tgz 10888ms (cache miss)
+227 http fetch GET 200 https://cdn.npmmirror.com/packages/gopd/1.2.0/gopd-1.2.0.tgz 10955ms (cache miss)
+228 http fetch GET 200 https://cdn.npmmirror.com/packages/glob-parent/5.1.2/glob-parent-5.1.2.tgz 10976ms (cache miss)
+229 http fetch GET 200 https://cdn.npmmirror.com/packages/has-symbols/1.1.0/has-symbols-1.1.0.tgz 10978ms (cache miss)
+230 http fetch GET 200 https://cdn.npmmirror.com/packages/get-proto/1.0.1/get-proto-1.0.1.tgz 11045ms (cache miss)
+231 http fetch GET 200 https://cdn.npmmirror.com/packages/graceful-fs/4.2.11/graceful-fs-4.2.11.tgz 11066ms (cache miss)
+232 http fetch GET 200 https://cdn.npmmirror.com/packages/get-stream/9.0.1/get-stream-9.0.1.tgz 11067ms (cache miss)
+233 http fetch GET 200 https://cdn.npmmirror.com/packages/has-flag/4.0.0/has-flag-4.0.0.tgz 11186ms (cache miss)
+234 http fetch GET 200 https://cdn.npmmirror.com/packages/get-east-asian-width/1.6.0/get-east-asian-width-1.6.0.tgz 11259ms (cache miss)
+235 http fetch GET 200 https://cdn.npmmirror.com/packages/get-intrinsic/1.3.0/get-intrinsic-1.3.0.tgz 11270ms (cache miss)
+236 http fetch GET 200 https://cdn.npmmirror.com/packages/get-own-enumerable-keys/1.0.0/get-own-enumerable-keys-1.0.0.tgz 11308ms (cache miss)
+237 http fetch GET 200 https://cdn.npmmirror.com/packages/function-bind/1.1.2/function-bind-1.1.2.tgz 11355ms (cache miss)
+238 http fetch GET 200 https://cdn.npmmirror.com/packages/gensync/1.0.0-beta.2/gensync-1.0.0-beta.2.tgz 11462ms (cache miss)
+239 http fetch GET 200 https://cdn.npmmirror.com/packages/hono/4.13.5/hono-4.13.5.tgz 11468ms (cache miss)
+240 http fetch GET 200 https://cdn.npmmirror.com/packages/fuzzysort/3.1.0/fuzzysort-3.1.0.tgz 11494ms (cache miss)
+241 http fetch GET 200 https://cdn.npmmirror.com/packages/forwarded/0.2.0/forwarded-0.2.0.tgz 11526ms (cache miss)
+242 http fetch GET 200 https://cdn.npmmirror.com/packages/fs-extra/11.4.0/fs-extra-11.4.0.tgz 11547ms (cache miss)
+243 http fetch GET 200 https://cdn.npmmirror.com/packages/finalhandler/2.1.1/finalhandler-2.1.1.tgz 11584ms (cache miss)
+244 http fetch GET 200 https://cdn.npmmirror.com/packages/find-up/3.0.0/find-up-3.0.0.tgz 11644ms (cache miss)
+245 http fetch GET 200 https://cdn.npmmirror.com/packages/fresh/2.0.0/fresh-2.0.0.tgz 11644ms (cache miss)
+246 http fetch GET 200 https://cdn.npmmirror.com/packages/figures/6.1.0/figures-6.1.0.tgz 11697ms (cache miss)
+247 http fetch GET 200 https://cdn.npmmirror.com/packages/fill-range/7.1.1/fill-range-7.1.1.tgz 11702ms (cache miss)
+248 http fetch GET 200 https://cdn.npmmirror.com/packages/fflate/0.7.5/fflate-0.7.5.tgz 11731ms (cache miss)
+249 http fetch GET 200 https://cdn.npmmirror.com/packages/fdir/6.5.0/fdir-6.5.0.tgz 11815ms (cache miss)
+250 http fetch GET 200 https://cdn.npmmirror.com/packages/fast-deep-equal/3.1.3/fast-deep-equal-3.1.3.tgz 11875ms (cache miss)
+251 http fetch GET 200 https://cdn.npmmirror.com/packages/express-rate-limit/8.7.0/express-rate-limit-8.7.0.tgz 11912ms (cache miss)
+252 http fetch GET 200 https://cdn.npmmirror.com/packages/fastq/1.20.3/fastq-1.20.3.tgz 12003ms (cache miss)
+253 http fetch GET 200 https://cdn.npmmirror.com/packages/express/5.2.1/express-5.2.1.tgz 12085ms (cache miss)
+254 http fetch GET 200 https://cdn.npmmirror.com/packages/fast-uri/3.1.6/fast-uri-3.1.6.tgz 12134ms (cache miss)
+255 http fetch GET 200 https://cdn.npmmirror.com/packages/eventsource/3.0.7/eventsource-3.0.7.tgz 12142ms (cache miss)
+256 http fetch GET 200 https://cdn.npmmirror.com/packages/estree-walker/3.0.3/estree-walker-3.0.3.tgz 12288ms (cache miss)
+257 http fetch GET 200 https://cdn.npmmirror.com/packages/execa/9.6.1/execa-9.6.1.tgz 12302ms (cache miss)
+258 http fetch GET 200 https://cdn.npmmirror.com/packages/escape-html/1.0.3/escape-html-1.0.3.tgz 12311ms (cache miss)
+259 http fetch GET 200 https://cdn.npmmirror.com/packages/fast-glob/3.3.3/fast-glob-3.3.3.tgz 12319ms (cache miss)
+260 http fetch GET 200 https://cdn.npmmirror.com/packages/eventsource-parser/3.1.1/eventsource-parser-3.1.1.tgz 12333ms (cache miss)
+261 http fetch GET 200 https://cdn.npmmirror.com/packages/events/3.3.0/events-3.3.0.tgz 12404ms (cache miss)
+262 http fetch GET 200 https://cdn.npmmirror.com/packages/esbuild/0.27.3/esbuild-0.27.3.tgz 12472ms (cache miss)
+263 http fetch GET 200 https://cdn.npmmirror.com/packages/es-object-atoms/1.1.2/es-object-atoms-1.1.2.tgz 12480ms (cache miss)
+264 http fetch GET 200 https://cdn.npmmirror.com/packages/escalade/3.2.0/escalade-3.2.0.tgz 12522ms (cache miss)
+265 http fetch GET 200 https://cdn.npmmirror.com/packages/esprima/4.0.1/esprima-4.0.1.tgz 12543ms (cache miss)
+266 http fetch GET 200 https://cdn.npmmirror.com/packages/es-module-lexer/2.3.2/es-module-lexer-2.3.2.tgz 12647ms (cache miss)
+267 http fetch GET 200 https://cdn.npmmirror.com/packages/es-define-property/1.0.1/es-define-property-1.0.1.tgz 12714ms (cache miss)
+268 http fetch GET 200 https://cdn.npmmirror.com/packages/enquirer/2.4.1/enquirer-2.4.1.tgz 12793ms (cache miss)
+269 http fetch GET 200 https://cdn.npmmirror.com/packages/env-paths/2.2.1/env-paths-2.2.1.tgz 12795ms (cache miss)
+270 http fetch GET 200 https://cdn.npmmirror.com/packages/error-stack-parser-es/1.0.5/error-stack-parser-es-1.0.5.tgz 12857ms (cache miss)
+271 http fetch GET 200 https://cdn.npmmirror.com/packages/encodeurl/2.0.0/encodeurl-2.0.0.tgz 12909ms (cache miss)
+272 http fetch GET 200 https://cdn.npmmirror.com/packages/enhanced-resolve/5.24.5/enhanced-resolve-5.24.5.tgz 12940ms (cache miss)
+273 http fetch GET 200 https://cdn.npmmirror.com/packages/ee-first/1.1.1/ee-first-1.1.1.tgz 12963ms (cache miss)
+274 http fetch GET 200 https://cdn.npmmirror.com/packages/electron-to-chromium/1.5.417/electron-to-chromium-1.5.417.tgz 12998ms (cache miss)
+275 http fetch GET 200 https://cdn.npmmirror.com/packages/emoji-regex-xs/2.0.1/emoji-regex-xs-2.0.1.tgz 13108ms (cache miss)
+276 http fetch GET 200 https://cdn.npmmirror.com/packages/emoji-regex/10.6.0/emoji-regex-10.6.0.tgz 13119ms (cache miss)
+277 http fetch GET 200 https://cdn.npmmirror.com/packages/dunder-proto/1.0.1/dunder-proto-1.0.1.tgz 13192ms (cache miss)
+278 http fetch GET 200 https://cdn.npmmirror.com/packages/dotenv/17.4.2/dotenv-17.4.2.tgz 13195ms (cache miss)
+279 http fetch GET 200 https://cdn.npmmirror.com/packages/dot-prop/6.0.1/dot-prop-6.0.1.tgz 13239ms (cache miss)
+280 http fetch GET 200 https://cdn.npmmirror.com/packages/etag/1.8.1/etag-1.8.1.tgz 13274ms (cache miss)
+281 http fetch GET 200 https://cdn.npmmirror.com/packages/detect-libc/2.1.2/detect-libc-2.1.2.tgz 13400ms (cache miss)
+282 http fetch GET 200 https://cdn.npmmirror.com/packages/define-lazy-prop/3.0.0/define-lazy-prop-3.0.0.tgz 13414ms (cache miss)
+283 http fetch GET 200 https://cdn.npmmirror.com/packages/default-browser-id/5.0.1/default-browser-id-5.0.1.tgz 13472ms (cache miss)
+284 http fetch GET 200 https://cdn.npmmirror.com/packages/diff/8.0.4/diff-8.0.4.tgz 13502ms (cache miss)
+285 http fetch GET 200 https://cdn.npmmirror.com/packages/depd/2.0.0/depd-2.0.0.tgz 13513ms (cache miss)
+286 http fetch GET 200 https://cdn.npmmirror.com/packages/deepmerge/4.3.1/deepmerge-4.3.1.tgz 13520ms (cache miss)
+287 http fetch GET 200 https://cdn.npmmirror.com/packages/default-browser/5.5.1/default-browser-5.5.1.tgz 13595ms (cache miss)
+288 http fetch GET 200 https://cdn.npmmirror.com/packages/es-errors/1.3.0/es-errors-1.3.0.tgz 13687ms (cache miss)
+289 http fetch GET 200 https://cdn.npmmirror.com/packages/debounce-fn/4.0.0/debounce-fn-4.0.0.tgz 13712ms (cache miss)
+290 http fetch GET 200 https://cdn.npmmirror.com/packages/debug/4.4.3/debug-4.4.3.tgz 13713ms (cache miss)
+291 http fetch GET 200 https://cdn.npmmirror.com/packages/lucide-react/1.31.0/lucide-react-1.31.0.tgz 13751ms (cache miss)
+292 http fetch GET 200 https://cdn.npmmirror.com/packages/dedent/1.7.2/dedent-1.7.2.tgz 13745ms (cache miss)
+293 http fetch GET 200 https://cdn.npmmirror.com/packages/error-ex/1.3.4/error-ex-1.3.4.tgz 13825ms (cache miss)
+294 http fetch GET 200 https://cdn.npmmirror.com/packages/cssesc/3.0.0/cssesc-3.0.0.tgz 13847ms (cache miss)
+295 http fetch GET 200 https://cdn.npmmirror.com/packages/css-gradient-parser/0.0.16/css-gradient-parser-0.0.16.tgz 13923ms (cache miss)
+296 http fetch GET 200 https://cdn.npmmirror.com/packages/csstype/3.2.3/csstype-3.2.3.tgz 13935ms (cache miss)
+297 http fetch GET 200 https://cdn.npmmirror.com/packages/css-to-react-native/3.2.0/css-to-react-native-3.2.0.tgz 13974ms (cache miss)
+298 http fetch GET 200 https://cdn.npmmirror.com/packages/css-background-parser/0.1.0/css-background-parser-0.1.0.tgz 13995ms (cache miss)
+299 http fetch GET 200 https://cdn.npmmirror.com/packages/css-box-shadow/1.0.0-3/css-box-shadow-1.0.0-3.tgz 14042ms (cache miss)
+300 http fetch GET 200 https://cdn.npmmirror.com/packages/css-color-keywords/1.0.0/css-color-keywords-1.0.0.tgz 14090ms (cache miss)
+301 http fetch GET 200 https://cdn.npmmirror.com/packages/cors/2.8.6/cors-2.8.6.tgz 14108ms (cache miss)
+302 http fetch GET 200 https://cdn.npmmirror.com/packages/cosmiconfig/9.0.2/cosmiconfig-9.0.2.tgz 14155ms (cache miss)
+303 http fetch GET 200 https://cdn.npmmirror.com/packages/content-type/1.0.5/content-type-1.0.5.tgz 14301ms (cache miss)
+304 http fetch GET 200 https://cdn.npmmirror.com/packages/cookie/0.7.2/cookie-0.7.2.tgz 14327ms (cache miss)
+305 http fetch GET 200 https://cdn.npmmirror.com/packages/convert-source-map/2.0.0/convert-source-map-2.0.0.tgz 14339ms (cache miss)
+306 http fetch GET 200 https://cdn.npmmirror.com/packages/cross-spawn/7.0.6/cross-spawn-7.0.6.tgz 14342ms (cache miss)
+307 http fetch GET 200 https://cdn.npmmirror.com/packages/content-disposition/1.1.0/content-disposition-1.1.0.tgz 14499ms (cache miss)
+308 http fetch GET 200 https://cdn.npmmirror.com/packages/conf/10.2.0/conf-10.2.0.tgz 14503ms (cache miss)
+309 http fetch GET 200 https://cdn.npmmirror.com/packages/color-name/1.1.4/color-name-1.1.4.tgz 14552ms (cache miss)
+310 http fetch GET 200 https://cdn.npmmirror.com/packages/commander/14.0.3/commander-14.0.3.tgz 14576ms (cache miss)
+311 http fetch GET 200 https://cdn.npmmirror.com/packages/code-block-writer/13.0.3/code-block-writer-13.0.3.tgz 14589ms (cache miss)
+312 http fetch GET 200 https://cdn.npmmirror.com/packages/cli-cursor/5.0.0/cli-cursor-5.0.0.tgz 14658ms (cache miss)
+313 http fetch GET 200 https://cdn.npmmirror.com/packages/cli-spinners/2.9.2/cli-spinners-2.9.2.tgz 14690ms (cache miss)
+314 http fetch GET 200 https://cdn.npmmirror.com/packages/chalk/5.6.2/chalk-5.6.2.tgz 14723ms (cache miss)
+315 http fetch GET 200 https://cdn.npmmirror.com/packages/chrome-trace-event/1.0.4/chrome-trace-event-1.0.4.tgz 14750ms (cache miss)
+316 http fetch GET 200 https://cdn.npmmirror.com/packages/camelize/1.0.1/camelize-1.0.1.tgz 14925ms (cache miss)
+317 http fetch GET 200 https://cdn.npmmirror.com/packages/call-bound/1.0.4/call-bound-1.0.4.tgz 14941ms (cache miss)
+318 http fetch GET 200 https://cdn.npmmirror.com/packages/class-variance-authority/0.7.1/class-variance-authority-0.7.1.tgz 14990ms (cache miss)
+319 http fetch GET 200 https://cdn.npmmirror.com/packages/bytes/3.1.2/bytes-3.1.2.tgz 15108ms (cache miss)
+320 http fetch GET 200 https://cdn.npmmirror.com/packages/callsites/3.1.0/callsites-3.1.0.tgz 15142ms (cache miss)
+321 http fetch GET 200 https://cdn.npmmirror.com/packages/bundle-name/4.1.0/bundle-name-4.1.0.tgz 15171ms (cache miss)
+322 http fetch GET 200 https://cdn.npmmirror.com/packages/cookie-signature/1.2.2/cookie-signature-1.2.2.tgz 15174ms (cache miss)
+323 http fetch GET 200 https://cdn.npmmirror.com/packages/buffer-from/1.1.2/buffer-from-1.1.2.tgz 15191ms (cache miss)
+324 http fetch GET 200 https://cdn.npmmirror.com/packages/call-bind-apply-helpers/1.0.2/call-bind-apply-helpers-1.0.2.tgz 15199ms (cache miss)
+325 http fetch GET 200 https://cdn.npmmirror.com/packages/browserslist/4.28.8/browserslist-4.28.8.tgz 15282ms (cache miss)
+326 http fetch GET 200 https://cdn.npmmirror.com/packages/body-parser/2.3.0/body-parser-2.3.0.tgz 15309ms (cache miss)
+327 http fetch GET 200 https://cdn.npmmirror.com/packages/brace-expansion/5.0.9/brace-expansion-5.0.9.tgz 15372ms (cache miss)
+328 http fetch GET 200 https://cdn.npmmirror.com/packages/braces/3.0.3/braces-3.0.3.tgz 15543ms (cache miss)
+329 http fetch GET 200 https://cdn.npmmirror.com/packages/base64-js/0.0.8/base64-js-0.0.8.tgz 15561ms (cache miss)
+330 http fetch GET 200 https://cdn.npmmirror.com/packages/blake3-wasm/2.1.5/blake3-wasm-2.1.5.tgz 15647ms (cache miss)
+331 http fetch GET 200 https://cdn.npmmirror.com/packages/ast-types/0.16.3/ast-types-0.16.3.tgz 15724ms (cache miss)
+332 http fetch GET 200 https://cdn.npmmirror.com/packages/ansi-colors/4.1.3/ansi-colors-4.1.3.tgz 15774ms (cache miss)
+333 http fetch GET 200 https://cdn.npmmirror.com/packages/balanced-match/4.0.4/balanced-match-4.0.4.tgz 15796ms (cache miss)
+334 http fetch GET 200 https://cdn.npmmirror.com/packages/caniuse-lite/1.0.30001810/caniuse-lite-1.0.30001810.tgz 15808ms (cache miss)
+335 http fetch GET 200 https://cdn.npmmirror.com/packages/argparse/2.0.1/argparse-2.0.1.tgz 15824ms (cache miss)
+336 http fetch GET 200 https://cdn.npmmirror.com/packages/baseline-browser-mapping/2.11.20/baseline-browser-mapping-2.11.20.tgz 15833ms (cache miss)
+337 http fetch GET 200 https://cdn.npmmirror.com/packages/atomically/1.7.0/atomically-1.7.0.tgz 15834ms (cache miss)
+338 http fetch GET 200 https://cdn.npmmirror.com/packages/clsx/2.1.1/clsx-2.1.1.tgz 15964ms (cache miss)
+339 http fetch GET 200 https://cdn.npmmirror.com/packages/ajv-keywords/5.1.0/ajv-keywords-5.1.0.tgz 15965ms (cache miss)
+340 http fetch GET 200 https://cdn.npmmirror.com/packages/acorn-loose/8.5.2/acorn-loose-8.5.2.tgz 15976ms (cache miss)
+341 http fetch GET 200 https://cdn.npmmirror.com/packages/ansi-regex/5.0.1/ansi-regex-5.0.1.tgz 16014ms (cache miss)
+342 http fetch GET 200 https://cdn.npmmirror.com/packages/accepts/2.0.0/accepts-2.0.0.tgz 16177ms (cache miss)
+343 http fetch GET 200 https://cdn.npmmirror.com/packages/%40xtuc/long/4.2.2/long-4.2.2.tgz 16194ms (cache miss)
+344 http fetch GET 200 https://cdn.npmmirror.com/packages/acorn/8.18.0/acorn-8.18.0.tgz 16223ms (cache miss)
+345 http fetch GET 200 https://cdn.npmmirror.com/packages/%40xtuc/ieee754/1.2.0/ieee754-1.2.0.tgz 16230ms (cache miss)
+346 http fetch GET 200 https://cdn.npmmirror.com/packages/ajv/8.20.0/ajv-8.20.0.tgz 16377ms (cache miss)
+347 http fetch GET 200 https://cdn.npmmirror.com/packages/%40webassemblyjs/wasm-parser/1.14.1/wasm-parser-1.14.1.tgz 16462ms (cache miss)
+348 http fetch GET 200 https://cdn.npmmirror.com/packages/%40webassemblyjs/wasm-opt/1.14.1/wasm-opt-1.14.1.tgz 16481ms (cache miss)
+349 http fetch GET 200 https://cdn.npmmirror.com/packages/%40webassemblyjs/wasm-edit/1.14.1/wasm-edit-1.14.1.tgz 16497ms (cache miss)
+350 http fetch GET 200 https://cdn.npmmirror.com/packages/%40webassemblyjs/utf8/1.13.2/utf8-1.13.2.tgz 16580ms (cache miss)
+351 http fetch GET 200 https://cdn.npmmirror.com/packages/%40webassemblyjs/leb128/1.13.2/leb128-1.13.2.tgz 16599ms (cache miss)
+352 http fetch GET 200 https://cdn.npmmirror.com/packages/%40webassemblyjs/wasm-gen/1.14.1/wasm-gen-1.14.1.tgz 16600ms (cache miss)
+353 http fetch GET 200 https://cdn.npmmirror.com/packages/%40webassemblyjs/wast-printer/1.14.1/wast-printer-1.14.1.tgz 16602ms (cache miss)
+354 http fetch GET 200 https://cdn.npmmirror.com/packages/%40webassemblyjs/ieee754/1.13.2/ieee754-1.13.2.tgz 16603ms (cache miss)
+355 http fetch GET 200 https://cdn.npmmirror.com/packages/%40webassemblyjs/helper-wasm-section/1.14.1/helper-wasm-section-1.14.1.tgz 16611ms (cache miss)
+356 http fetch GET 200 https://cdn.npmmirror.com/packages/%40webassemblyjs/helper-wasm-bytecode/1.13.2/helper-wasm-bytecode-1.13.2.tgz 16643ms (cache miss)
+357 http fetch GET 200 https://cdn.npmmirror.com/packages/%40webassemblyjs/helper-numbers/1.13.2/helper-numbers-1.13.2.tgz 16796ms (cache miss)
+358 http fetch GET 200 https://cdn.npmmirror.com/packages/%40webassemblyjs/helper-api-error/1.13.2/helper-api-error-1.13.2.tgz 16857ms (cache miss)
+359 http fetch GET 200 https://cdn.npmmirror.com/packages/ajv-formats/3.0.1/ajv-formats-3.0.1.tgz 16885ms (cache miss)
+360 http fetch GET 200 https://cdn.npmmirror.com/packages/%40webassemblyjs/helper-buffer/1.14.1/helper-buffer-1.14.1.tgz 16901ms (cache miss)
+361 http fetch GET 200 https://cdn.npmmirror.com/packages/%40webassemblyjs/ast/1.14.1/ast-1.14.1.tgz 16936ms (cache miss)
+362 http fetch GET 200 https://cdn.npmmirror.com/packages/%40webassemblyjs/floating-point-hex-parser/1.13.2/floating-point-hex-parser-1.13.2.tgz 17088ms (cache miss)
+363 http fetch GET 200 https://cdn.npmmirror.com/packages/%40vitejs/plugin-react/6.0.2/plugin-react-6.0.2.tgz 17127ms (cache miss)
+364 http fetch GET 200 https://cdn.npmmirror.com/packages/%40types/stats.js/0.17.4/stats.js-0.17.4.tgz 17226ms (cache miss)
+365 http fetch GET 200 https://cdn.npmmirror.com/packages/%40unpic/react/1.0.2/react-1.0.2.tgz 17237ms (cache miss)
+366 http fetch GET 200 https://cdn.npmmirror.com/packages/%40types/webxr/0.5.24/webxr-0.5.24.tgz 17283ms (cache miss)
+367 http fetch GET 200 https://cdn.npmmirror.com/packages/%40unpic/core/1.0.3/core-1.0.3.tgz 17285ms (cache miss)
+368 http fetch GET 200 https://cdn.npmmirror.com/packages/%40types/validate-npm-package-name/4.0.2/validate-npm-package-name-4.0.2.tgz 17425ms (cache miss)
+369 http fetch GET 200 https://cdn.npmmirror.com/packages/%40types/react/19.2.14/react-19.2.14.tgz 17563ms (cache miss)
+370 http fetch GET 200 https://cdn.npmmirror.com/packages/%40types/json-schema/7.0.15/json-schema-7.0.15.tgz 17579ms (cache miss)
+371 http fetch GET 200 https://cdn.npmmirror.com/packages/%40types/node/22.19.19/node-22.19.19.tgz 17617ms (cache miss)
+372 http fetch GET 200 https://cdn.npmmirror.com/packages/%40types/react-dom/19.2.3/react-dom-19.2.3.tgz 17694ms (cache miss)
+373 http fetch GET 200 https://cdn.npmmirror.com/packages/%40vitejs/plugin-rsc/0.5.26/plugin-rsc-0.5.26.tgz 17744ms (cache miss)
+374 http fetch GET 200 https://cdn.npmmirror.com/packages/%40tweenjs/tween.js/23.1.3/tween.js-23.1.3.tgz 17744ms (cache miss)
+375 http fetch GET 200 https://cdn.npmmirror.com/packages/%40tailwindcss/oxide/4.2.1/oxide-4.2.1.tgz 17841ms (cache miss)
+376 http fetch GET 200 https://cdn.npmmirror.com/packages/%40tailwindcss/postcss/4.2.1/postcss-4.2.1.tgz 17858ms (cache miss)
+377 http fetch GET 200 https://cdn.npmmirror.com/packages/%40vinext/types/1.0.0-beta.2/types-1.0.0-beta.2.tgz 17938ms (cache miss)
+378 http fetch GET 200 https://cdn.npmmirror.com/packages/%40sec-ant/readable-stream/0.4.1/readable-stream-0.4.1.tgz 17989ms (cache miss)
+379 http fetch GET 200 https://cdn.npmmirror.com/packages/%40types/estree/1.0.9/estree-1.0.9.tgz 17992ms (cache miss)
+380 http fetch GET 200 https://cdn.npmmirror.com/packages/%40sindresorhus/is/7.2.0/is-7.2.0.tgz 17997ms (cache miss)
+381 http fetch GET 200 https://cdn.npmmirror.com/packages/%40tailwindcss/node/4.2.1/node-4.2.1.tgz 18014ms (cache miss)
+382 http fetch GET 200 https://cdn.npmmirror.com/packages/%40vercel/og/0.8.6/og-0.8.6.tgz 18039ms (cache miss)
+383 http fetch GET 200 https://cdn.npmmirror.com/packages/%40sindresorhus/merge-streams/4.0.0/merge-streams-4.0.0.tgz 18156ms (cache miss)
+384 http fetch GET 200 https://cdn.npmmirror.com/packages/%40rolldown/pluginutils/1.0.1/pluginutils-1.0.1.tgz 18187ms (cache miss)
+385 http fetch GET 200 https://cdn.npmmirror.com/packages/%40tailwindcss/oxide-win32-x64-msvc/4.2.1/oxide-win32-x64-msvc-4.2.1.tgz 18280ms (cache miss)
+386 http fetch GET 200 https://cdn.npmmirror.com/packages/%40poppinss/exception/1.2.3/exception-1.2.3.tgz 18328ms (cache miss)
+387 http fetch GET 200 https://cdn.npmmirror.com/packages/%40speed-highlight/core/1.2.24/core-1.2.24.tgz 18330ms (cache miss)
+388 http fetch GET 200 https://cdn.npmmirror.com/packages/%40shuding/opentype.js/1.4.0-beta.0/opentype.js-1.4.0-beta.0.tgz 18483ms (cache miss)
+389 http fetch GET 200 https://cdn.npmmirror.com/packages/%40resvg/resvg-wasm/2.4.0/resvg-wasm-2.4.0.tgz 18590ms (cache miss)
+390 http fetch GET 200 https://cdn.npmmirror.com/packages/%40openai/sites-vite-plugin/0.2.0/sites-vite-plugin-0.2.0.tgz 18595ms (cache miss)
+391 http fetch GET 200 https://cdn.npmmirror.com/packages/%40oxc-project/types/0.130.0/types-0.130.0.tgz 18612ms (cache miss)
+392 http fetch GET 200 https://cdn.npmmirror.com/packages/%40poppinss/colors/4.1.6/colors-4.1.6.tgz 18622ms (cache miss)
+393 http fetch GET 200 https://cdn.npmmirror.com/packages/%40types/three/0.185.4/three-0.185.4.tgz 18657ms (cache miss)
+394 http fetch GET 200 https://cdn.npmmirror.com/packages/%40poppinss/dumper/0.6.5/dumper-0.6.5.tgz 18705ms (cache miss)
+395 http fetch GET 200 https://cdn.npmmirror.com/packages/%40nodelib/fs.stat/2.0.5/fs.stat-2.0.5.tgz 18752ms (cache miss)
+396 http fetch GET 200 https://cdn.npmmirror.com/packages/%40ts-morph/common/0.27.0/common-0.27.0.tgz 18823ms (cache miss)
+397 http fetch GET 200 https://cdn.npmmirror.com/packages/%40nodelib/fs.scandir/2.1.5/fs.scandir-2.1.5.tgz 18843ms (cache miss)
+398 http fetch GET 200 https://cdn.npmmirror.com/packages/%40nodelib/fs.walk/1.2.8/fs.walk-1.2.8.tgz 18853ms (cache miss)
+399 http fetch GET 200 https://cdn.npmmirror.com/packages/%40jridgewell/sourcemap-codec/1.6.0/sourcemap-codec-1.6.0.tgz 18941ms (cache miss)
+400 http fetch GET 200 https://cdn.npmmirror.com/packages/%40jridgewell/source-map/0.3.11/source-map-0.3.11.tgz 18948ms (cache miss)
+401 http fetch GET 200 https://cdn.npmmirror.com/packages/%40jridgewell/trace-mapping/0.3.31/trace-mapping-0.3.31.tgz 19015ms (cache miss)
+402 http fetch GET 200 https://cdn.npmmirror.com/packages/%40jridgewell/resolve-uri/3.1.2/resolve-uri-3.1.2.tgz 19137ms (cache miss)
+403 http fetch GET 200 https://cdn.npmmirror.com/packages/%40jridgewell/gen-mapping/0.3.13/gen-mapping-0.3.13.tgz 19189ms (cache miss)
+404 http fetch GET 200 https://cdn.npmmirror.com/packages/%40img/colour/1.1.0/colour-1.1.0.tgz 19236ms (cache miss)
+405 http fetch GET 200 https://cdn.npmmirror.com/packages/%40floating-ui/react-dom/2.1.9/react-dom-2.1.9.tgz 19245ms (cache miss)
+406 http fetch GET 200 https://cdn.npmmirror.com/packages/%40floating-ui/utils/0.2.12/utils-0.2.12.tgz 19254ms (cache miss)
+407 http fetch GET 200 https://cdn.npmmirror.com/packages/%40hono/node-server/2.1.1/node-server-2.1.1.tgz 19263ms (cache miss)
+408 http fetch GET 200 https://cdn.npmmirror.com/packages/%40floating-ui/core/1.8.0/core-1.8.0.tgz 19294ms (cache miss)
+409 http fetch GET 200 https://cdn.npmmirror.com/packages/%40floating-ui/dom/1.8.0/dom-1.8.0.tgz 19380ms (cache miss)
+410 http fetch GET 200 https://cdn.npmmirror.com/packages/%40jridgewell/remapping/2.3.5/remapping-2.3.5.tgz 19383ms (cache miss)
+411 http fetch GET 200 https://cdn.npmmirror.com/packages/%40dotenvx/primitives/0.8.0/primitives-0.8.0.tgz 19608ms (cache miss)
+412 http fetch GET 200 https://cdn.npmmirror.com/packages/%40modelcontextprotocol/sdk/1.30.0/sdk-1.30.0.tgz 19718ms (cache miss)
+413 http fetch GET 200 https://cdn.npmmirror.com/packages/%40dotenvx/dotenvx/1.75.1/dotenvx-1.75.1.tgz 19734ms (cache miss)
+414 http fetch GET 200 https://cdn.npmmirror.com/packages/%40cspotcode/source-map-support/0.8.1/source-map-support-0.8.1.tgz 19873ms (cache miss)
+415 http fetch GET 200 https://cdn.npmmirror.com/packages/%40cloudflare/kv-asset-handler/0.5.0/kv-asset-handler-0.5.0.tgz 19876ms (cache miss)
+416 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/template/7.29.7/template-7.29.7.tgz 19952ms (cache miss)
+417 http fetch GET 200 https://cdn.npmmirror.com/packages/%40oxfmt/binding-win32-x64-msvc/0.61.0/binding-win32-x64-msvc-0.61.0.tgz 19995ms (cache miss)
+418 http fetch GET 200 https://cdn.npmmirror.com/packages/%40base-ui/utils/0.3.2/utils-0.3.2.tgz 20116ms (cache miss)
+419 http fetch GET 200 https://cdn.npmmirror.com/packages/%40cloudflare/unenv-preset/2.16.1/unenv-preset-2.16.1.tgz 20167ms (cache miss)
+420 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/preset-typescript/7.29.7/preset-typescript-7.29.7.tgz 20199ms (cache miss)
+421 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/plugin-transform-typescript/7.29.7/plugin-transform-typescript-7.29.7.tgz 20235ms (cache miss)
+422 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/types/7.29.8/types-7.29.8.tgz 20246ms (cache miss)
+423 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/traverse/7.29.8/traverse-7.29.8.tgz 20291ms (cache miss)
+424 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/plugin-transform-modules-commonjs/7.29.7/plugin-transform-modules-commonjs-7.29.7.tgz 20292ms (cache miss)
+425 http fetch GET 200 https://cdn.npmmirror.com/packages/%40cloudflare/vite-plugin/1.37.1/vite-plugin-1.37.1.tgz 20413ms (cache miss)
+426 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/plugin-syntax-typescript/7.29.7/plugin-syntax-typescript-7.29.7.tgz 20472ms (cache miss)
+427 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/plugin-syntax-jsx/7.29.7/plugin-syntax-jsx-7.29.7.tgz 20510ms (cache miss)
+428 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/helper-string-parser/7.29.7/helper-string-parser-7.29.7.tgz 20515ms (cache miss)
+429 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/helper-validator-identifier/7.29.7/helper-validator-identifier-7.29.7.tgz 20529ms (cache miss)
+430 http fetch GET 200 https://cdn.npmmirror.com/packages/%40dimforge/rapier3d-compat/0.12.0/rapier3d-compat-0.12.0.tgz 20617ms (cache miss)
+431 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/helper-validator-option/7.29.7/helper-validator-option-7.29.7.tgz 20617ms (cache miss)
+432 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/runtime/7.29.7/runtime-7.29.7.tgz 20640ms (cache miss)
+433 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/parser/7.29.8/parser-7.29.8.tgz 20670ms (cache miss)
+434 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/helper-plugin-utils/7.29.7/helper-plugin-utils-7.29.7.tgz 20720ms (cache miss)
+435 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/helper-replace-supers/7.29.7/helper-replace-supers-7.29.7.tgz 20751ms (cache miss)
+436 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/helper-optimise-call-expression/7.29.7/helper-optimise-call-expression-7.29.7.tgz 20813ms (cache miss)
+437 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/helper-skip-transparent-expression-wrappers/7.29.7/helper-skip-transparent-expression-wrappers-7.29.7.tgz 20816ms (cache miss)
+438 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/helper-globals/7.29.7/helper-globals-7.29.7.tgz 20914ms (cache miss)
+439 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/helper-module-transforms/7.29.7/helper-module-transforms-7.29.7.tgz 20927ms (cache miss)
+440 http fetch GET 200 https://cdn.npmmirror.com/packages/%40cloudflare/workers-types/4.20260515.1/workers-types-4.20260515.1.tgz 20973ms (cache miss)
+441 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/helper-member-expression-to-functions/7.29.7/helper-member-expression-to-functions-7.29.7.tgz 20973ms (cache miss)
+442 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/helper-module-imports/7.29.7/helper-module-imports-7.29.7.tgz 21021ms (cache miss)
+443 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/helper-compilation-targets/7.29.7/helper-compilation-targets-7.29.7.tgz 21063ms (cache miss)
+444 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/helper-annotate-as-pure/7.29.7/helper-annotate-as-pure-7.29.7.tgz 21103ms (cache miss)
+445 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/helper-create-class-features-plugin/7.29.7/helper-create-class-features-plugin-7.29.7.tgz 21138ms (cache miss)
+446 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/helpers/7.29.7/helpers-7.29.7.tgz 21172ms (cache miss)
+447 http fetch GET 200 https://cdn.npmmirror.com/packages/%40alloc/quick-lru/5.2.0/quick-lru-5.2.0.tgz 21201ms (cache miss)
+448 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/generator/7.29.8/generator-7.29.8.tgz 21282ms (cache miss)
+449 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/code-frame/7.29.7/code-frame-7.29.7.tgz 21282ms (cache miss)
+450 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/core/7.29.7/core-7.29.7.tgz 21300ms (cache miss)
+451 http fetch GET 200 https://cdn.npmmirror.com/packages/cookie/1.1.1/cookie-1.1.1.tgz 21353ms (cache miss)
+452 http fetch GET 200 https://cdn.npmmirror.com/packages/es-module-lexer/1.7.0/es-module-lexer-1.7.0.tgz 21432ms (cache miss)
+453 http fetch GET 200 https://cdn.npmmirror.com/packages/path-to-regexp/6.3.0/path-to-regexp-6.3.0.tgz 21441ms (cache miss)
+454 http fetch GET 200 https://cdn.npmmirror.com/packages/content-type/2.1.0/content-type-2.1.0.tgz 21501ms (cache miss)
+455 http fetch GET 200 https://cdn.npmmirror.com/packages/powershell-utils/0.1.0/powershell-utils-0.1.0.tgz 21625ms (cache miss)
+456 http fetch GET 200 https://cdn.npmmirror.com/packages/js-tokens/9.0.1/js-tokens-9.0.1.tgz 21687ms (cache miss)
+457 http fetch GET 200 https://cdn.npmmirror.com/packages/%40oxlint-tsgolint/win32-x64/7.0.2001/win32-x64-7.0.2001.tgz 21738ms (cache miss)
+458 http fetch GET 200 https://cdn.npmmirror.com/packages/lightningcss/1.33.0/lightningcss-1.33.0.tgz 21751ms (cache miss)
+459 http fetch GET 200 https://cdn.npmmirror.com/packages/ipaddr.js/2.5.0/ipaddr.js-2.5.0.tgz 21752ms (cache miss)
+460 http fetch GET 200 https://cdn.npmmirror.com/packages/%40oxlint/binding-win32-x64-msvc/1.76.0/binding-win32-x64-msvc-1.76.0.tgz 21829ms (cache miss)
+461 http fetch GET 200 https://cdn.npmmirror.com/packages/commander/2.20.3/commander-2.20.3.tgz 21829ms (cache miss)
+462 http fetch GET 200 https://cdn.npmmirror.com/packages/is-obj/3.0.0/is-obj-3.0.0.tgz 21931ms (cache miss)
+463 http fetch GET 200 https://cdn.npmmirror.com/packages/strip-ansi/7.2.0/strip-ansi-7.2.0.tgz 21977ms (cache miss)
+464 http fetch GET 200 https://cdn.npmmirror.com/packages/ansi-regex/6.3.0/ansi-regex-6.3.0.tgz 22037ms (cache miss)
+465 http fetch GET 200 https://cdn.npmmirror.com/packages/ajv-formats/2.1.1/ajv-formats-2.1.1.tgz 22063ms (cache miss)
+466 http fetch GET 200 https://cdn.npmmirror.com/packages/semver/7.8.5/semver-7.8.5.tgz 22089ms (cache miss)
+467 http fetch GET 200 https://cdn.npmmirror.com/packages/mimic-fn/2.1.0/mimic-fn-2.1.0.tgz 22138ms (cache miss)
+468 http fetch GET 200 https://cdn.npmmirror.com/packages/%40babel/compat-data/7.29.7/compat-data-7.29.7.tgz 22163ms (cache miss)
+469 http fetch GET 200 https://cdn.npmmirror.com/packages/kleur/3.0.3/kleur-3.0.3.tgz 22242ms (cache miss)
+470 http fetch GET 200 https://cdn.npmmirror.com/packages/%40esbuild/win32-x64/0.27.3/win32-x64-0.27.3.tgz 22252ms (cache miss)
+471 http fetch GET 200 https://cdn.npmmirror.com/packages/onetime/7.0.0/onetime-7.0.0.tgz 22265ms (cache miss)
+472 http fetch GET 200 https://cdn.npmmirror.com/packages/ansi-regex/6.3.0/ansi-regex-6.3.0.tgz 22274ms (cache miss)
+473 http fetch GET 200 https://cdn.npmmirror.com/packages/strip-ansi/7.2.0/strip-ansi-7.2.0.tgz 22302ms (cache revalidated)
+474 http fetch GET 200 https://cdn.npmmirror.com/packages/picomatch/2.3.2/picomatch-2.3.2.tgz 22373ms (cache miss)
+475 http fetch GET 200 https://cdn.npmmirror.com/packages/content-type/2.1.0/content-type-2.1.0.tgz 22484ms (cache revalidated)
+476 http fetch GET 200 https://cdn.npmmirror.com/packages/isexe/2.0.0/isexe-2.0.0.tgz 22575ms (cache miss)
+477 http fetch GET 200 https://cdn.npmmirror.com/packages/%40rolldown/binding-win32-x64-msvc/1.0.1/binding-win32-x64-msvc-1.0.1.tgz 22597ms (cache miss)
+478 http fetch GET 200 https://cdn.npmmirror.com/packages/which/2.0.2/which-2.0.2.tgz 22615ms (cache miss)
+479 http fetch GET 200 https://cdn.npmmirror.com/packages/is-unicode-supported/1.3.0/is-unicode-supported-1.3.0.tgz 22621ms (cache miss)
+480 http fetch GET 200 https://cdn.npmmirror.com/packages/semver/7.8.5/semver-7.8.5.tgz 22756ms (cache revalidated)
+481 http fetch GET 200 https://cdn.npmmirror.com/packages/json-schema-typed/7.0.3/json-schema-typed-7.0.3.tgz 22824ms (cache miss)
+482 http fetch GET 200 https://cdn.npmmirror.com/packages/fflate/0.8.3/fflate-0.8.3.tgz 22857ms (cache miss)
+483 http fetch GET 200 https://cdn.npmmirror.com/packages/content-type/2.1.0/content-type-2.1.0.tgz 22877ms (cache revalidated)
+484 http fetch GET 200 https://cdn.npmmirror.com/packages/open/8.4.2/open-8.4.2.tgz 22896ms (cache miss)
+485 http fetch GET 200 https://cdn.npmmirror.com/packages/undici/7.29.0/undici-7.29.0.tgz 22939ms (cache miss)
+486 http fetch GET 200 https://cdn.npmmirror.com/packages/%40rolldown/pluginutils/1.0.0-rc.18/pluginutils-1.0.0-rc.18.tgz 22952ms (cache miss)
+487 http fetch GET 200 https://cdn.npmmirror.com/packages/npm-run-path/4.0.1/npm-run-path-4.0.1.tgz 22955ms (cache miss)
+488 http fetch GET 200 https://cdn.npmmirror.com/packages/webpack/5.110.2/webpack-5.110.2.tgz 22968ms (cache miss)
+489 http fetch GET 200 https://cdn.npmmirror.com/packages/ajv-formats/2.1.1/ajv-formats-2.1.1.tgz 23028ms (cache revalidated)
+490 http fetch GET 200 https://cdn.npmmirror.com/packages/supports-color/10.2.2/supports-color-10.2.2.tgz 23029ms (cache miss)
+491 http fetch GET 200 https://cdn.npmmirror.com/packages/is-wsl/2.2.0/is-wsl-2.2.0.tgz 23091ms (cache miss)
+492 http fetch GET 200 https://cdn.npmmirror.com/packages/strip-final-newline/2.0.0/strip-final-newline-2.0.0.tgz 23111ms (cache miss)
+493 http fetch GET 200 https://cdn.npmmirror.com/packages/signal-exit/3.0.7/signal-exit-3.0.7.tgz 23193ms (cache miss)
+494 http fetch GET 200 https://cdn.npmmirror.com/packages/%40jridgewell/trace-mapping/0.3.9/trace-mapping-0.3.9.tgz 23289ms (cache miss)
+495 http fetch GET 200 https://cdn.npmmirror.com/packages/is-docker/2.2.1/is-docker-2.2.1.tgz 23395ms (cache miss)
+496 http fetch GET 200 https://cdn.npmmirror.com/packages/path-key/4.0.0/path-key-4.0.0.tgz 23407ms (cache miss)
+497 http fetch GET 200 https://cdn.npmmirror.com/packages/get-stream/6.0.1/get-stream-6.0.1.tgz 23457ms (cache miss)
+498 http fetch GET 200 https://cdn.npmmirror.com/packages/lightningcss-win32-x64-msvc/1.33.0/lightningcss-win32-x64-msvc-1.33.0.tgz 23466ms (cache miss)
+499 http fetch GET 200 https://cdn.npmmirror.com/packages/define-lazy-prop/2.0.0/define-lazy-prop-2.0.0.tgz 23489ms (cache miss)
+500 http fetch GET 200 https://cdn.npmmirror.com/packages/is-stream/2.0.1/is-stream-2.0.1.tgz 23502ms (cache miss)
+501 http fetch GET 200 https://cdn.npmmirror.com/packages/execa/5.1.1/execa-5.1.1.tgz 23576ms (cache miss)
+502 http fetch GET 200 https://cdn.npmmirror.com/packages/human-signals/2.1.0/human-signals-2.1.0.tgz 23762ms (cache miss)
+503 http fetch GET 200 https://cdn.npmmirror.com/packages/%40img/sharp-win32-x64/0.34.5/sharp-win32-x64-0.34.5.tgz 23852ms (cache miss)
+504 http fetch GET 200 https://cdn.npmmirror.com/packages/three/0.185.1/three-0.185.1.tgz 24066ms (cache miss)
+505 http fetch GET 200 https://cdn.npmmirror.com/packages/commander/11.1.0/commander-11.1.0.tgz 24115ms (cache miss)
+506 http fetch GET 200 https://cdn.npmmirror.com/packages/%40base-ui/react/1.7.0/react-1.7.0.tgz 25335ms (cache miss)
+507 http fetch GET 200 https://cdn.npmmirror.com/packages/%40cloudflare/workerd-windows-64/1.20260515.1/workerd-windows-64-1.20260515.1.tgz 36534ms (cache miss)
+508 info run sharp@0.34.5 install node_modules/sharp node install/check.js || npm run build
+509 info run sharp@0.34.5 install { code: 0, signal: null }
+510 info run esbuild@0.27.3 postinstall node_modules/esbuild node install.js
+511 info run workerd@1.20260515.1 postinstall node_modules/workerd node install.js
+512 info run esbuild@0.27.3 postinstall { code: 0, signal: null }
+513 info run workerd@1.20260515.1 postinstall { code: 0, signal: null }
+514 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 87813ms
+515 silly audit report {
+515 silly audit report   esbuild: [
+515 silly audit report     {
+515 silly audit report       id: 1120680,
+515 silly audit report       url: 'https://github.com/advisories/GHSA-g7r4-m6w7-qqqr',
+515 silly audit report       title: 'esbuild allows arbitrary file read when running the development server on Windows',
+515 silly audit report       severity: 'low',
+515 silly audit report       vulnerable_versions: '>=0.27.3 <0.28.1',
+515 silly audit report       cwe: [Array],
+515 silly audit report       cvss: [Object]
+515 silly audit report     }
+515 silly audit report   ],
+515 silly audit report   'image-size': [
+515 silly audit report     {
+515 silly audit report       id: 1138808,
+515 silly audit report       url: 'https://github.com/advisories/GHSA-w3rx-r6r6-pgpr',
+515 silly audit report       title: 'image-size: ICNS parser allows denial of service through an infinite loop',
+515 silly audit report       severity: 'high',
+515 silly audit report       vulnerable_versions: '<=2.0.2',
+515 silly audit report       cwe: [Array],
+515 silly audit report       cvss: [Object]
+515 silly audit report     },
+515 silly audit report     {
+515 silly audit report       id: 1138809,
+515 silly audit report       url: 'https://github.com/advisories/GHSA-5p2g-fcmc-qvqq',
+515 silly audit report       title: 'image-size: JXL and HEIF parsers allow denial of service through infinite loops',
+515 silly audit report       severity: 'high',
+515 silly audit report       vulnerable_versions: '<=2.0.2',
+515 silly audit report       cwe: [Array],
+515 silly audit report       cvss: [Object]
+515 silly audit report     }
+515 silly audit report   ],
+515 silly audit report   'react-server-dom-webpack': [
+515 silly audit report     {
+515 silly audit report       id: 1124314,
+515 silly audit report       url: 'https://github.com/advisories/GHSA-wx67-qw84-cm4g',
+515 silly audit report       title: 'react-server-dom: Denial of Service in Server Functions',
+515 silly audit report       severity: 'high',
+515 silly audit report       vulnerable_versions: '>=19.2.0 <19.2.8',
+515 silly audit report       cwe: [Array],
+515 silly audit report       cvss: [Object]
+515 silly audit report     }
+515 silly audit report   ],
+515 silly audit report   undici: [
+515 silly audit report     {
+515 silly audit report       id: 1130715,
+515 silly audit report       url: 'https://github.com/advisories/GHSA-8xcm-r25x-g524',
+515 silly audit report       title: 'undici vulnerable to downstream response desynchronization via retry interceptor',
+515 silly audit report       severity: 'moderate',
+515 silly audit report       vulnerable_versions: '>=7.0.0 <7.29.0',
+515 silly audit report       cwe: [Array],
+515 silly audit report       cvss: [Object]
+515 silly audit report     },
+515 silly audit report     {
+515 silly audit report       id: 1130718,
+515 silly audit report       url: 'https://github.com/advisories/GHSA-4cwx-7wf7-3272',
+515 silly audit report       title: 'undici vulnerable to cross-user information disclosure and parse-time crash via degenerate private cache directives',
+515 silly audit report       severity: 'high',
+515 silly audit report       vulnerable_versions: '>=7.0.0 <7.29.0',
+515 silly audit report       cwe: [Array],
+515 silly audit report       cvss: [Object]
+515 silly audit report     },
+515 silly audit report     {
+515 silly audit report       id: 1130726,
+515 silly audit report       url: 'https://github.com/advisories/GHSA-m8rv-5g2x-5cg5',
+515 silly audit report       title: "undici vulnerable to CRLF Injection via blob-like body 'type' property",
+515 silly audit report       severity: 'moderate',
+515 silly audit report       vulnerable_versions: '>=7.0.0 <7.29.0',
+515 silly audit report       cwe: [Array],
+515 silly audit report       cvss: [Object]
+515 silly audit report     },
+515 silly audit report     {
+515 silly audit report       id: 1130729,
+515 silly audit report       url: 'https://github.com/advisories/GHSA-jr45-8vmc-qm54',
+515 silly audit report       title: 'undici vulnerable to cross-user information disclosure via whitespace around equals in Cache-Control directives',
+515 silly audit report       severity: 'moderate',
+515 silly audit report       vulnerable_versions: '>=7.0.0 <7.29.0',
+515 silly audit report       cwe: [Array],
+515 silly audit report       cvss: [Object]
+515 silly audit report     },
+515 silly audit report     {
+515 silly audit report       id: 1130731,
+515 silly audit report       url: 'https://github.com/advisories/GHSA-v3r7-h72x-cjcm',
+515 silly audit report       title: 'undici vulnerable to cookie attribute injection via unsanitized domain and unparsed setCookie fields',
+515 silly audit report       severity: 'moderate',
+515 silly audit report       vulnerable_versions: '>=7.0.0 <7.29.0',
+515 silly audit report       cwe: [Array],
+515 silly audit report       cvss: [Object]
+515 silly audit report     },
+515 silly audit report     {
+515 silly audit report       id: 1121187,
+515 silly audit report       url: 'https://github.com/advisories/GHSA-vmh5-mc38-953g',
+515 silly audit report       title: 'undici vulnerable to TLS certificate validation bypass via dropped requestTls in SOCKS5 ProxyAgent',
+515 silly audit report       severity: 'high',
+515 silly audit report       vulnerable_versions: '>=7.23.0 <7.28.0',
+515 silly audit report       cwe: [Array],
+515 silly audit report       cvss: [Object]
+515 silly audit report     },
+515 silly audit report     {
+515 silly audit report       id: 1121241,
+515 silly audit report       url: 'https://github.com/advisories/GHSA-p88m-4jfj-68fv',
+515 silly audit report       title: 'undici vulnerable to HTTP header injection via Set-Cookie percent-decoding',
+515 silly audit report       severity: 'moderate',
+515 silly audit report       vulnerable_versions: '>=7.0.0 <7.28.0',
+515 silly audit report       cwe: [Array],
+515 silly audit report       cvss: [Object]
+515 silly audit report     },
+515 silly audit report     {
+515 silly audit report       id: 1121244,
+515 silly audit report       url: 'https://github.com/advisories/GHSA-vxpw-j846-p89q',
+515 silly audit report       title: 'undici WebSocket client vulnerable to denial of service via fragment count bypass',
+515 silly audit report       severity: 'high',
+515 silly audit report       vulnerable_versions: '>=7.0.0 <7.28.0',
+515 silly audit report       cwe: [Array],
+515 silly audit report       cvss: [Object]
+515 silly audit report     },
+515 silly audit report     {
+515 silly audit report       id: 1121247,
+515 silly audit report       url: 'https://github.com/advisories/GHSA-hm92-r4w5-c3mj',
+515 silly audit report       title: 'undici vulnerable to cross-origin request routing via SOCKS5 proxy pool reuse',
+515 silly audit report       severity: 'high',
+515 silly audit report       vulnerable_versions: '>=7.23.0 <7.28.0',
+515 silly audit report       cwe: [Array],
+515 silly audit report       cvss: [Object]
+515 silly audit report     },
+515 silly audit report     {
+515 silly audit report       id: 1121254,
+515 silly audit report       url: 'https://github.com/advisories/GHSA-g8m3-5g58-fq7m',
+515 silly audit report       title: 'undici vulnerable to Set-Cookie SameSite attribute downgrade via permissive substring matching',
+515 silly audit report       severity: 'low',
+515 silly audit report       vulnerable_versions: '>=7.0.0 <7.28.0',
+515 silly audit report       cwe: [Array],
+515 silly audit report       cvss: [Object]
+515 silly audit report     },
+515 silly audit report     {
+515 silly audit report       id: 1121428,
+515 silly audit report       url: 'https://github.com/advisories/GHSA-pr7r-676h-xcf6',
+515 silly audit report       title: 'undici vulnerable to cross-user information disclosure via shared cache whitespace bypass',
+515 silly audit report       severity: 'moderate',
+515 silly audit report       vulnerable_versions: '>=7.0.0 <7.28.0',
+515 silly audit report       cwe: [Array],
+515 silly audit report       cvss: [Object]
+515 silly audit report     },
+515 silly audit report     {
+515 silly audit report       id: 1137242,
+515 silly audit report       url: 'https://github.com/advisories/GHSA-35p6-xmwp-9g52',
+515 silly audit report       title: 'undici vulnerable to HTTP response queue poisoning via keep-alive socket reuse',
+515 silly audit report       severity: 'low',
+515 silly audit report       vulnerable_versions: '>=7.0.0 <7.28.0',
+515 silly audit report       cwe: [Array],
+515 silly audit report       cvss: [Object]
+515 silly audit report     }
+515 silly audit report   ],
+515 silly audit report   sharp: [
+515 silly audit report     {
+515 silly audit report       id: 1124066,
+515 silly audit report       url: 'https://github.com/advisories/GHSA-f88m-g3jw-g9cj',
+515 silly audit report       title: 'sharp inherited vulnerabilities in libvips: CVE-2026-33327, CVE-2026-33328, CVE-2026-35590, CVE-2026-35591',
+515 silly audit report       severity: 'high',
+515 silly audit report       vulnerable_versions: '<0.35.0',
+515 silly audit report       cwe: [Array],
+515 silly audit report       cvss: [Object]
+515 silly audit report     }
+515 silly audit report   ],
+515 silly audit report   vite: [
+515 silly audit report     {
+515 silly audit report       id: 1120786,
+515 silly audit report       url: 'https://github.com/advisories/GHSA-v6wh-96g9-6wx3',
+515 silly audit report       title: 'launch-editor: NTLMv2 hash disclosure via UNC path handling on Windows',
+515 silly audit report       severity: 'moderate',
+515 silly audit report       vulnerable_versions: '>=8.0.0 <=8.0.15',
+515 silly audit report       cwe: [Array],
+515 silly audit report       cvss: [Object]
+515 silly audit report     },
+515 silly audit report     {
+515 silly audit report       id: 1123527,
+515 silly audit report       url: 'https://github.com/advisories/GHSA-fx2h-pf6j-xcff',
+515 silly audit report       title: 'vite: `server.fs.deny` bypass on Windows alternate paths',
+515 silly audit report       severity: 'high',
+515 silly audit report       vulnerable_versions: '>=8.0.0 <=8.0.15',
+515 silly audit report       cwe: [Array],
+515 silly audit report       cvss: [Object]
+515 silly audit report     }
+515 silly audit report   ],
+515 silly audit report   ws: [
+515 silly audit report     {
+515 silly audit report       id: 1119108,
+515 silly audit report       url: 'https://github.com/advisories/GHSA-58qx-3vcg-4xpx',
+515 silly audit report       title: 'ws: Uninitialized memory disclosure',
+515 silly audit report       severity: 'moderate',
+515 silly audit report       vulnerable_versions: '>=8.0.0 <8.20.1',
+515 silly audit report       cwe: [Array],
+515 silly audit report       cvss: [Object]
+515 silly audit report     },
+515 silly audit report     {
+515 silly audit report       id: 1123259,
+515 silly audit report       url: 'https://github.com/advisories/GHSA-96hv-2xvq-fx4p',
+515 silly audit report       title: 'ws: Memory exhaustion DoS from tiny fragments and data chunks',
+515 silly audit report       severity: 'high',
+515 silly audit report       vulnerable_versions: '>=8.0.0 <8.21.0',
+515 silly audit report       cwe: [Array],
+515 silly audit report       cvss: [Object]
+515 silly audit report     }
+515 silly audit report   ]
+515 silly audit report }
+516 silly packumentCache corgi:https://registry.npmjs.org/esbuild cache-miss
+517 silly packumentCache corgi:https://registry.npmjs.org/image-size cache-miss
+518 silly packumentCache corgi:https://registry.npmjs.org/react-server-dom-webpack cache-miss
+519 silly packumentCache corgi:https://registry.npmjs.org/undici cache-miss
+520 silly packumentCache corgi:https://registry.npmjs.org/sharp cache-miss
+521 silly packumentCache corgi:https://registry.npmjs.org/vite cache-miss
+522 silly packumentCache corgi:https://registry.npmjs.org/ws cache-miss
+523 http fetch GET 200 https://registry.npmjs.org/image-size 191ms (cache miss)
+524 silly packumentCache corgi:https://registry.npmjs.org/image-size set size:undefined disposed:false
+525 http fetch GET 200 https://registry.npmjs.org/esbuild 283ms (cache miss)
+526 silly packumentCache corgi:https://registry.npmjs.org/esbuild set size:undefined disposed:false
+527 http fetch GET 200 https://registry.npmjs.org/sharp 834ms (cache miss)
+528 silly packumentCache corgi:https://registry.npmjs.org/sharp set size:undefined disposed:false
+529 http fetch GET 200 https://registry.npmjs.org/ws 857ms (cache miss)
+530 silly packumentCache corgi:https://registry.npmjs.org/ws set size:undefined disposed:false
+531 http fetch GET 200 https://registry.npmjs.org/undici 897ms (cache miss)
+532 silly packumentCache corgi:https://registry.npmjs.org/undici set size:undefined disposed:false
+533 http fetch GET 200 https://registry.npmjs.org/vite 1132ms (cache miss)
+534 silly packumentCache corgi:https://registry.npmjs.org/vite set size:undefined disposed:false
+535 http fetch GET 200 https://registry.npmjs.org/react-server-dom-webpack 1276ms (cache miss)
+536 silly packumentCache corgi:https://registry.npmjs.org/react-server-dom-webpack set size:undefined disposed:false
+537 silly packumentCache corgi:https://registry.npmjs.org/wrangler cache-miss
+538 http fetch GET 200 https://registry.npmjs.org/wrangler 684ms (cache miss)
+539 silly packumentCache corgi:https://registry.npmjs.org/wrangler set size:undefined disposed:false
+540 silly packumentCache corgi:https://registry.npmjs.org/vinext cache-miss
+541 http fetch GET 200 https://registry.npmjs.org/vinext 149ms (cache miss)
+542 silly packumentCache corgi:https://registry.npmjs.org/vinext set size:undefined disposed:false
+543 silly packumentCache corgi:https://registry.npmjs.org/@vitejs%2fplugin-rsc cache-miss
+544 http fetch GET 200 https://registry.npmjs.org/@vitejs%2fplugin-rsc 177ms (cache miss)
+545 silly packumentCache corgi:https://registry.npmjs.org/@vitejs%2fplugin-rsc set size:undefined disposed:false
+546 silly packumentCache corgi:https://registry.npmjs.org/@dotenvx%2fdotenvx cache-miss
+547 silly packumentCache corgi:https://registry.npmjs.org/miniflare cache-miss
+548 http fetch GET 200 https://registry.npmjs.org/@dotenvx%2fdotenvx 226ms (cache miss)
+549 silly packumentCache corgi:https://registry.npmjs.org/@dotenvx%2fdotenvx set size:undefined disposed:false
+550 http fetch GET 200 https://registry.npmjs.org/miniflare 342ms (cache miss)
+551 silly packumentCache corgi:https://registry.npmjs.org/miniflare set size:undefined disposed:false
+552 silly packumentCache corgi:https://registry.npmjs.org/@cloudflare%2fvite-plugin cache-miss
+553 silly packumentCache corgi:https://registry.npmjs.org/@openai%2fsites-vite-plugin cache-miss
+554 silly packumentCache corgi:https://registry.npmjs.org/@vitejs%2fplugin-react cache-miss
+555 silly packumentCache corgi:https://registry.npmjs.org/vitefu cache-miss
+556 http fetch GET 200 https://registry.npmjs.org/vitefu 180ms (cache miss)
+557 silly packumentCache corgi:https://registry.npmjs.org/vitefu set size:undefined disposed:false
+558 http fetch GET 200 https://registry.npmjs.org/@openai%2fsites-vite-plugin 205ms (cache miss)
+559 silly packumentCache corgi:https://registry.npmjs.org/@openai%2fsites-vite-plugin set size:undefined disposed:false
+560 http fetch GET 200 https://registry.npmjs.org/@vitejs%2fplugin-react 206ms (cache miss)
+561 silly packumentCache corgi:https://registry.npmjs.org/@vitejs%2fplugin-react set size:undefined disposed:false
+562 http fetch GET 200 https://registry.npmjs.org/@cloudflare%2fvite-plugin 245ms (cache miss)
+563 silly packumentCache corgi:https://registry.npmjs.org/@cloudflare%2fvite-plugin set size:undefined disposed:false
+564 silly ADD node_modules/zod-to-json-schema
+565 silly ADD node_modules/zod
+566 silly ADD node_modules/youch-core
+567 silly ADD node_modules/youch
+568 silly ADD node_modules/youch/node_modules/cookie
+569 silly ADD node_modules/yoga-layout
+570 silly ADD node_modules/yoctocolors
+571 silly ADD node_modules/yocto-spinner
+572 silly ADD node_modules/yallist
+573 silly ADD node_modules/wsl-utils
+574 silly ADD node_modules/wsl-utils/node_modules/powershell-utils
+575 silly ADD node_modules/ws
+576 silly ADD node_modules/wrappy
+577 silly ADD node_modules/wrangler
+578 silly ADD node_modules/wrangler/node_modules/path-to-regexp
+579 silly ADD node_modules/workerd
+580 silly ADD node_modules/which
+581 silly ADD node_modules/webpack-sources
+582 silly ADD node_modules/web-vitals
+583 silly ADD node_modules/watchpack
+584 silly ADD node_modules/vitefu
+585 silly ADD node_modules/vite-plugin-dynamic-import
+586 silly ADD node_modules/vite-plugin-dynamic-import/node_modules/es-module-lexer
+587 silly ADD node_modules/vite-plugin-commonjs
+588 silly ADD node_modules/vite
+589 silly ADD node_modules/vite/node_modules/lightningcss-win32-x64-msvc
+590 silly ADD node_modules/vite/node_modules/lightningcss
+591 silly ADD node_modules/vinext
+592 silly ADD node_modules/vinext/node_modules/ipaddr.js
+593 silly ADD node_modules/vary
+594 silly ADD node_modules/validate-npm-package-name
+595 silly ADD node_modules/util-deprecate
+596 silly ADD node_modules/use-sync-external-store
+597 silly ADD node_modules/update-browserslist-db
+598 silly ADD node_modules/unpipe
+599 silly ADD node_modules/unpic
+600 silly ADD node_modules/universalify
+601 silly ADD node_modules/unicorn-magic
+602 silly ADD node_modules/unicode-trie
+603 silly ADD node_modules/unenv
+604 silly ADD node_modules/undici-types
+605 silly ADD node_modules/undici
+606 silly ADD node_modules/typescript
+607 silly ADD node_modules/type-is
+608 silly ADD node_modules/type-is/node_modules/content-type
+609 silly ADD node_modules/turbo-stream
+610 silly ADD node_modules/tslib
+611 silly ADD node_modules/tsconfig-paths
+612 silly ADD node_modules/ts-morph
+613 silly ADD node_modules/toidentifier
+614 silly ADD node_modules/to-regex-range
+615 silly ADD node_modules/tinypool
+616 silly ADD node_modules/tinyglobby
+617 silly ADD node_modules/tiny-invariant
+618 silly ADD node_modules/tiny-inflate
+619 silly ADD node_modules/terser
+620 silly ADD node_modules/terser/node_modules/commander
+621 silly ADD node_modules/tapable
+622 silly ADD node_modules/tailwindcss
+623 silly ADD node_modules/tailwind-merge
+624 silly ADD node_modules/systeminformation
+625 silly ADD node_modules/supports-color
+626 silly ADD node_modules/strip-literal
+627 silly ADD node_modules/strip-literal/node_modules/js-tokens
+628 silly ADD node_modules/strip-final-newline
+629 silly ADD node_modules/strip-bom
+630 silly ADD node_modules/strip-ansi
+631 silly ADD node_modules/stringify-object
+632 silly ADD node_modules/stringify-object/node_modules/is-obj
+633 silly ADD node_modules/string.prototype.codepointat
+634 silly ADD node_modules/string-width
+635 silly ADD node_modules/string-width/node_modules/strip-ansi
+636 silly ADD node_modules/string-width/node_modules/ansi-regex
+637 silly ADD node_modules/stdin-discarder
+638 silly ADD node_modules/statuses
+639 silly ADD node_modules/srvx
+640 silly ADD node_modules/source-map-support
+641 silly ADD node_modules/source-map-js
+642 silly ADD node_modules/source-map
+643 silly ADD node_modules/socks
+644 silly ADD node_modules/smart-buffer
+645 silly ADD node_modules/sisteransi
+646 silly ADD node_modules/signal-exit
+647 silly ADD node_modules/side-channel-weakmap
+648 silly ADD node_modules/side-channel-map
+649 silly ADD node_modules/side-channel-list
+650 silly ADD node_modules/side-channel
+651 silly ADD node_modules/shebang-regex
+652 silly ADD node_modules/shebang-command
+653 silly ADD node_modules/sharp
+654 silly ADD node_modules/sharp/node_modules/semver
+655 silly ADD node_modules/shadcn
+656 silly ADD node_modules/shadcn/node_modules/undici
+657 silly ADD node_modules/setprototypeof
+658 silly ADD node_modules/serve-static
+659 silly ADD node_modules/send
+660 silly ADD node_modules/semver
+661 silly ADD node_modules/schema-utils
+662 silly ADD node_modules/schema-utils/node_modules/ajv-formats
+663 silly ADD node_modules/scheduler
+664 silly ADD node_modules/satori
+665 silly ADD node_modules/safer-buffer
+666 silly ADD node_modules/run-parallel
+667 silly ADD node_modules/run-applescript
+668 silly ADD node_modules/router
+669 silly ADD node_modules/rolldown
+670 silly ADD node_modules/reusify
+671 silly ADD node_modules/restore-cursor
+672 silly ADD node_modules/restore-cursor/node_modules/onetime
+673 silly ADD node_modules/resolve-from
+674 silly ADD node_modules/reselect
+675 silly ADD node_modules/require-from-string
+676 silly ADD node_modules/recast
+677 silly ADD node_modules/react-server-dom-webpack
+678 silly ADD node_modules/react-dom
+679 silly ADD node_modules/react
+680 silly ADD node_modules/raw-body
+681 silly ADD node_modules/range-parser
+682 silly ADD node_modules/queue-microtask
+683 silly ADD node_modules/qs
+684 silly ADD node_modules/proxy-addr
+685 silly ADD node_modules/prompts
+686 silly ADD node_modules/prompts/node_modules/kleur
+687 silly ADD node_modules/pretty-ms
+688 silly ADD node_modules/powershell-utils
+689 silly ADD node_modules/postcss-value-parser
+690 silly ADD node_modules/postcss-selector-parser
+691 silly ADD node_modules/postcss
+692 silly ADD node_modules/pkg-up
+693 silly ADD node_modules/pkce-challenge
+694 silly ADD node_modules/picomatch
+695 silly ADD node_modules/picocolors
+696 silly ADD node_modules/pathe
+697 silly ADD node_modules/path-to-regexp
+698 silly ADD node_modules/path-key
+699 silly ADD node_modules/path-exists
+700 silly ADD node_modules/path-browserify
+701 silly ADD node_modules/parseurl
+702 silly ADD node_modules/parse-ms
+703 silly ADD node_modules/parse-json
+704 silly ADD node_modules/parse-css-color
+705 silly ADD node_modules/parent-module
+706 silly ADD node_modules/pako
+707 silly ADD node_modules/p-try
+708 silly ADD node_modules/p-locate
+709 silly ADD node_modules/p-limit
+710 silly ADD node_modules/oxlint-tsgolint
+711 silly ADD node_modules/oxlint
+712 silly ADD node_modules/oxfmt
+713 silly ADD node_modules/ora
+714 silly ADD node_modules/ora/node_modules/strip-ansi
+715 silly ADD node_modules/ora/node_modules/ansi-regex
+716 silly ADD node_modules/open
+717 silly ADD node_modules/onetime
+718 silly ADD node_modules/onetime/node_modules/mimic-fn
+719 silly ADD node_modules/once
+720 silly ADD node_modules/on-finished
+721 silly ADD node_modules/object-treeify
+722 silly ADD node_modules/object-inspect
+723 silly ADD node_modules/object-assign
+724 silly ADD node_modules/npm-run-path
+725 silly ADD node_modules/npm-run-path/node_modules/path-key
+726 silly ADD node_modules/node-releases
+727 silly ADD node_modules/neo-async
+728 silly ADD node_modules/negotiator
+729 silly ADD node_modules/negotiator/node_modules/content-type
+730 silly ADD node_modules/nanoid
+731 silly ADD node_modules/ms
+732 silly ADD node_modules/minimizer-webpack-plugin
+733 silly ADD node_modules/minimist
+734 silly ADD node_modules/minimatch
+735 silly ADD node_modules/miniflare
+736 silly ADD node_modules/mimic-function
+737 silly ADD node_modules/mimic-fn
+738 silly ADD node_modules/mime-types
+739 silly ADD node_modules/mime-db
+740 silly ADD node_modules/micromatch
+741 silly ADD node_modules/micromatch/node_modules/picomatch
+742 silly ADD node_modules/meshoptimizer
+743 silly ADD node_modules/merge2
+744 silly ADD node_modules/merge-stream
+745 silly ADD node_modules/merge-descriptors
+746 silly ADD node_modules/media-typer
+747 silly ADD node_modules/math-intrinsics
+748 silly ADD node_modules/magic-string
+749 silly ADD node_modules/lucide-react
+750 silly ADD node_modules/lru-cache
+751 silly ADD node_modules/log-symbols
+752 silly ADD node_modules/log-symbols/node_modules/is-unicode-supported
+753 silly ADD node_modules/locate-path
+754 silly ADD node_modules/lines-and-columns
+755 silly ADD node_modules/linebreak
+756 silly ADD node_modules/lightningcss-win32-x64-msvc
+757 silly ADD node_modules/lightningcss
+758 silly ADD node_modules/kleur
+759 silly ADD node_modules/jsonfile
+760 silly ADD node_modules/json5
+761 silly ADD node_modules/json-schema-typed
+762 silly ADD node_modules/json-schema-traverse
+763 silly ADD node_modules/json-parse-even-better-errors
+764 silly ADD node_modules/jsesc
+765 silly ADD node_modules/js-yaml
+766 silly ADD node_modules/js-tokens
+767 silly ADD node_modules/jose
+768 silly ADD node_modules/jiti
+769 silly ADD node_modules/jest-worker
+770 silly ADD node_modules/isexe
+771 silly ADD node_modules/is-wsl
+772 silly ADD node_modules/is-unicode-supported
+773 silly ADD node_modules/is-stream
+774 silly ADD node_modules/is-regexp
+775 silly ADD node_modules/is-promise
+776 silly ADD node_modules/is-plain-obj
+777 silly ADD node_modules/is-obj
+778 silly ADD node_modules/is-number
+779 silly ADD node_modules/is-interactive
+780 silly ADD node_modules/is-inside-container
+781 silly ADD node_modules/is-in-ssh
+782 silly ADD node_modules/is-glob
+783 silly ADD node_modules/is-extglob
+784 silly ADD node_modules/is-docker
+785 silly ADD node_modules/is-arrayish
+786 silly ADD node_modules/ipaddr.js
+787 silly ADD node_modules/ip-address
+788 silly ADD node_modules/inherits
+789 silly ADD node_modules/import-fresh
+790 silly ADD node_modules/image-size
+791 silly ADD node_modules/ignore
+792 silly ADD node_modules/iconv-lite
+793 silly ADD node_modules/human-signals
+794 silly ADD node_modules/http-errors
+795 silly ADD node_modules/hono
+796 silly ADD node_modules/hex-rgb
+797 silly ADD node_modules/hasown
+798 silly ADD node_modules/has-symbols
+799 silly ADD node_modules/has-flag
+800 silly ADD node_modules/graceful-fs
+801 silly ADD node_modules/gopd
+802 silly ADD node_modules/glob-parent
+803 silly ADD node_modules/get-stream
+804 silly ADD node_modules/get-proto
+805 silly ADD node_modules/get-own-enumerable-keys
+806 silly ADD node_modules/get-intrinsic
+807 silly ADD node_modules/get-east-asian-width
+808 silly ADD node_modules/gensync
+809 silly ADD node_modules/fuzzysort
+810 silly ADD node_modules/function-bind
+811 silly ADD node_modules/fs-extra
+812 silly ADD node_modules/fresh
+813 silly ADD node_modules/forwarded
+814 silly ADD node_modules/find-up
+815 silly ADD node_modules/finalhandler
+816 silly ADD node_modules/fill-range
+817 silly ADD node_modules/figures
+818 silly ADD node_modules/fflate
+819 silly ADD node_modules/fdir
+820 silly ADD node_modules/fastq
+821 silly ADD node_modules/fast-uri
+822 silly ADD node_modules/fast-glob
+823 silly ADD node_modules/fast-deep-equal
+824 silly ADD node_modules/express-rate-limit
+825 silly ADD node_modules/express
+826 silly ADD node_modules/execa
+827 silly ADD node_modules/eventsource-parser
+828 silly ADD node_modules/eventsource
+829 silly ADD node_modules/events
+830 silly ADD node_modules/etag
+831 silly ADD node_modules/estree-walker
+832 silly ADD node_modules/esprima
+833 silly ADD node_modules/escape-html
+834 silly ADD node_modules/escalade
+835 silly ADD node_modules/esbuild
+836 silly ADD node_modules/es-object-atoms
+837 silly ADD node_modules/es-module-lexer
+838 silly ADD node_modules/es-errors
+839 silly ADD node_modules/es-define-property
+840 silly ADD node_modules/error-stack-parser-es
+841 silly ADD node_modules/error-ex
+842 silly ADD node_modules/env-paths
+843 silly ADD node_modules/enquirer
+844 silly ADD node_modules/enhanced-resolve
+845 silly ADD node_modules/encodeurl
+846 silly ADD node_modules/emoji-regex-xs
+847 silly ADD node_modules/emoji-regex
+848 silly ADD node_modules/electron-to-chromium
+849 silly ADD node_modules/ee-first
+850 silly ADD node_modules/dunder-proto
+851 silly ADD node_modules/dotenv
+852 silly ADD node_modules/dot-prop
+853 silly ADD node_modules/diff
+854 silly ADD node_modules/detect-libc
+855 silly ADD node_modules/depd
+856 silly ADD node_modules/define-lazy-prop
+857 silly ADD node_modules/default-browser-id
+858 silly ADD node_modules/default-browser
+859 silly ADD node_modules/deepmerge
+860 silly ADD node_modules/dedent
+861 silly ADD node_modules/debug
+862 silly ADD node_modules/debounce-fn
+863 silly ADD node_modules/csstype
+864 silly ADD node_modules/cssesc
+865 silly ADD node_modules/css-to-react-native
+866 silly ADD node_modules/css-gradient-parser
+867 silly ADD node_modules/css-color-keywords
+868 silly ADD node_modules/css-box-shadow
+869 silly ADD node_modules/css-background-parser
+870 silly ADD node_modules/cross-spawn
+871 silly ADD node_modules/cross-spawn/node_modules/which
+872 silly ADD node_modules/cross-spawn/node_modules/isexe
+873 silly ADD node_modules/cosmiconfig
+874 silly ADD node_modules/cors
+875 silly ADD node_modules/cookie-signature
+876 silly ADD node_modules/cookie
+877 silly ADD node_modules/convert-source-map
+878 silly ADD node_modules/content-type
+879 silly ADD node_modules/content-disposition
+880 silly ADD node_modules/conf
+881 silly ADD node_modules/conf/node_modules/semver
+882 silly ADD node_modules/conf/node_modules/json-schema-typed
+883 silly ADD node_modules/conf/node_modules/ajv-formats
+884 silly ADD node_modules/commander
+885 silly ADD node_modules/color-name
+886 silly ADD node_modules/code-block-writer
+887 silly ADD node_modules/clsx
+888 silly ADD node_modules/cli-spinners
+889 silly ADD node_modules/cli-cursor
+890 silly ADD node_modules/class-variance-authority
+891 silly ADD node_modules/chrome-trace-event
+892 silly ADD node_modules/chalk
+893 silly ADD node_modules/caniuse-lite
+894 silly ADD node_modules/camelize
+895 silly ADD node_modules/callsites
+896 silly ADD node_modules/call-bound
+897 silly ADD node_modules/call-bind-apply-helpers
+898 silly ADD node_modules/bytes
+899 silly ADD node_modules/bundle-name
+900 silly ADD node_modules/buffer-from
+901 silly ADD node_modules/browserslist
+902 silly ADD node_modules/braces
+903 silly ADD node_modules/brace-expansion
+904 silly ADD node_modules/body-parser
+905 silly ADD node_modules/body-parser/node_modules/content-type
+906 silly ADD node_modules/blake3-wasm
+907 silly ADD node_modules/baseline-browser-mapping
+908 silly ADD node_modules/base64-js
+909 silly ADD node_modules/balanced-match
+910 silly ADD node_modules/atomically
+911 silly ADD node_modules/ast-types
+912 silly ADD node_modules/argparse
+913 silly ADD node_modules/ansi-regex
+914 silly ADD node_modules/ansi-colors
+915 silly ADD node_modules/ajv-keywords
+916 silly ADD node_modules/ajv-formats
+917 silly ADD node_modules/ajv
+918 silly ADD node_modules/acorn-loose
+919 silly ADD node_modules/acorn
+920 silly ADD node_modules/accepts
+921 silly ADD node_modules/@xtuc/long
+922 silly ADD node_modules/@xtuc/ieee754
+923 silly ADD node_modules/@webassemblyjs/wast-printer
+924 silly ADD node_modules/@webassemblyjs/wasm-parser
+925 silly ADD node_modules/@webassemblyjs/wasm-opt
+926 silly ADD node_modules/@webassemblyjs/wasm-gen
+927 silly ADD node_modules/@webassemblyjs/wasm-edit
+928 silly ADD node_modules/@webassemblyjs/utf8
+929 silly ADD node_modules/@webassemblyjs/leb128
+930 silly ADD node_modules/@webassemblyjs/ieee754
+931 silly ADD node_modules/@webassemblyjs/helper-wasm-section
+932 silly ADD node_modules/@webassemblyjs/helper-wasm-bytecode
+933 silly ADD node_modules/@webassemblyjs/helper-numbers
+934 silly ADD node_modules/@webassemblyjs/helper-buffer
+935 silly ADD node_modules/@webassemblyjs/helper-api-error
+936 silly ADD node_modules/@webassemblyjs/floating-point-hex-parser
+937 silly ADD node_modules/@webassemblyjs/ast
+938 silly ADD node_modules/@vitejs/plugin-rsc
+939 silly ADD node_modules/@vitejs/plugin-rsc/node_modules/@rolldown/pluginutils
+940 silly ADD node_modules/@vitejs/plugin-react
+941 silly ADD node_modules/@vinext/types
+942 silly ADD node_modules/@vercel/og
+943 silly ADD node_modules/@unpic/react
+944 silly ADD node_modules/@unpic/core
+945 silly ADD node_modules/@types/webxr
+946 silly ADD node_modules/@types/validate-npm-package-name
+947 silly ADD node_modules/@types/three
+948 silly ADD node_modules/@types/three/node_modules/fflate
+949 silly ADD node_modules/@types/stats.js
+950 silly ADD node_modules/@types/react-dom
+951 silly ADD node_modules/@types/react
+952 silly ADD node_modules/@types/node
+953 silly ADD node_modules/@types/json-schema
+954 silly ADD node_modules/@types/estree
+955 silly ADD node_modules/@tweenjs/tween.js
+956 silly ADD node_modules/@ts-morph/common
+957 silly ADD node_modules/@tailwindcss/postcss
+958 silly ADD node_modules/@tailwindcss/oxide-win32-x64-msvc
+959 silly ADD node_modules/@tailwindcss/oxide
+960 silly ADD node_modules/@tailwindcss/node
+961 silly ADD node_modules/@speed-highlight/core
+962 silly ADD node_modules/@sindresorhus/merge-streams
+963 silly ADD node_modules/@sindresorhus/is
+964 silly ADD node_modules/@shuding/opentype.js
+965 silly ADD node_modules/@sec-ant/readable-stream
+966 silly ADD node_modules/@rolldown/pluginutils
+967 silly ADD node_modules/@rolldown/binding-win32-x64-msvc
+968 silly ADD node_modules/@resvg/resvg-wasm
+969 silly ADD node_modules/@poppinss/exception
+970 silly ADD node_modules/@poppinss/dumper
+971 silly ADD node_modules/@poppinss/dumper/node_modules/supports-color
+972 silly ADD node_modules/@poppinss/colors
+973 silly ADD node_modules/@oxlint/binding-win32-x64-msvc
+974 silly ADD node_modules/@oxlint-tsgolint/win32-x64
+975 silly ADD node_modules/@oxfmt/binding-win32-x64-msvc
+976 silly ADD node_modules/@oxc-project/types
+977 silly ADD node_modules/@openai/sites-vite-plugin
+978 silly ADD node_modules/@nodelib/fs.walk
+979 silly ADD node_modules/@nodelib/fs.stat
+980 silly ADD node_modules/@nodelib/fs.scandir
+981 silly ADD node_modules/@modelcontextprotocol/sdk
+982 silly ADD node_modules/@jridgewell/trace-mapping
+983 silly ADD node_modules/@jridgewell/sourcemap-codec
+984 silly ADD node_modules/@jridgewell/source-map
+985 silly ADD node_modules/@jridgewell/resolve-uri
+986 silly ADD node_modules/@jridgewell/remapping
+987 silly ADD node_modules/@jridgewell/gen-mapping
+988 silly ADD node_modules/@img/sharp-win32-x64
+989 silly ADD node_modules/@img/colour
+990 silly ADD node_modules/@hono/node-server
+991 silly ADD node_modules/@floating-ui/utils
+992 silly ADD node_modules/@floating-ui/react-dom
+993 silly ADD node_modules/@floating-ui/dom
+994 silly ADD node_modules/@floating-ui/core
+995 silly ADD node_modules/@esbuild/win32-x64
+996 silly ADD node_modules/@dotenvx/primitives
+997 silly ADD node_modules/@dotenvx/dotenvx
+998 silly ADD node_modules/@dotenvx/dotenvx/node_modules/strip-final-newline
+999 silly ADD node_modules/@dotenvx/dotenvx/node_modules/signal-exit
+1000 silly ADD node_modules/@dotenvx/dotenvx/node_modules/open
+1001 silly ADD node_modules/@dotenvx/dotenvx/node_modules/npm-run-path
+1002 silly ADD node_modules/@dotenvx/dotenvx/node_modules/is-wsl
+1003 silly ADD node_modules/@dotenvx/dotenvx/node_modules/is-stream
+1004 silly ADD node_modules/@dotenvx/dotenvx/node_modules/is-docker
+1005 silly ADD node_modules/@dotenvx/dotenvx/node_modules/human-signals
+1006 silly ADD node_modules/@dotenvx/dotenvx/node_modules/get-stream
+1007 silly ADD node_modules/@dotenvx/dotenvx/node_modules/execa
+1008 silly ADD node_modules/@dotenvx/dotenvx/node_modules/define-lazy-prop
+1009 silly ADD node_modules/@dotenvx/dotenvx/node_modules/commander
+1010 silly ADD node_modules/@dimforge/rapier3d-compat
+1011 silly ADD node_modules/@cspotcode/source-map-support
+1012 silly ADD node_modules/@cspotcode/source-map-support/node_modules/@jridgewell/trace-mapping
+1013 silly ADD node_modules/@cloudflare/workers-types
+1014 silly ADD node_modules/@cloudflare/workerd-windows-64
+1015 silly ADD node_modules/@cloudflare/vite-plugin
+1016 silly ADD node_modules/@cloudflare/unenv-preset
+1017 silly ADD node_modules/@cloudflare/kv-asset-handler
+1018 silly ADD node_modules/@base-ui/utils
+1019 silly ADD node_modules/@babel/types
+1020 silly ADD node_modules/@babel/traverse
+1021 silly ADD node_modules/@babel/template
+1022 silly ADD node_modules/@babel/runtime
+1023 silly ADD node_modules/@babel/preset-typescript
+1024 silly ADD node_modules/@babel/plugin-transform-typescript
+1025 silly ADD node_modules/@babel/plugin-transform-modules-commonjs
+1026 silly ADD node_modules/@babel/plugin-syntax-typescript
+1027 silly ADD node_modules/@babel/plugin-syntax-jsx
+1028 silly ADD node_modules/@babel/parser
+1029 silly ADD node_modules/@babel/helpers
+1030 silly ADD node_modules/@babel/helper-validator-option
+1031 silly ADD node_modules/@babel/helper-validator-identifier
+1032 silly ADD node_modules/@babel/helper-string-parser
+1033 silly ADD node_modules/@babel/helper-skip-transparent-expression-wrappers
+1034 silly ADD node_modules/@babel/helper-replace-supers
+1035 silly ADD node_modules/@babel/helper-plugin-utils
+1036 silly ADD node_modules/@babel/helper-optimise-call-expression
+1037 silly ADD node_modules/@babel/helper-module-transforms
+1038 silly ADD node_modules/@babel/helper-module-imports
+1039 silly ADD node_modules/@babel/helper-member-expression-to-functions
+1040 silly ADD node_modules/@babel/helper-globals
+1041 silly ADD node_modules/@babel/helper-create-class-features-plugin
+1042 silly ADD node_modules/@babel/helper-compilation-targets
+1043 silly ADD node_modules/@babel/helper-annotate-as-pure
+1044 silly ADD node_modules/@babel/generator
+1045 silly ADD node_modules/@babel/core
+1046 silly ADD node_modules/@babel/compat-data
+1047 silly ADD node_modules/@babel/code-frame
+1048 silly ADD node_modules/@alloc/quick-lru
+1049 silly CHANGE node_modules/webpack
+1050 silly CHANGE node_modules/@base-ui/react
+1051 silly CHANGE node_modules/three
+1052 warn allow-scripts 3 packages have install scripts not yet covered by allowScripts:
+1052 warn allow-scripts   esbuild@0.27.3 (postinstall: node install.js)
+1052 warn allow-scripts   sharp@0.34.5 (install: node install/check.js || npm run build)
+1052 warn allow-scripts   workerd@1.20260515.1 (postinstall: node install.js)
+1052 warn allow-scripts
+1052 warn allow-scripts Run `npm approve-scripts --allow-scripts-pending` to review, or `npm approve-scripts <pkg>` to allow.
+1053 verbose cwd D:\项目\virtual-window-tracker-main (1)\virtual-window-tracker-main\web
+1054 verbose os Windows_NT 10.0.26200
+1055 verbose node v24.18.0
+1056 verbose npm  v11.16.0
+1057 notice
+1057 notice New major version of npm available! 11.16.0 -> 12.0.2
+1057 notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2
+1057 notice To update run: npm install -g npm@12.0.2
+1057 notice  { force: true, Symbol(proc-log.meta): true }
+1058 verbose exit 0
+1059 info ok
